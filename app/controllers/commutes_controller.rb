@@ -1,7 +1,7 @@
 class CommutesController < ApplicationController
 
   def index
-
+    @commute = Commute.find(params[:commute_id])
   end
 
   def new
@@ -10,14 +10,16 @@ class CommutesController < ApplicationController
 
   def create
     @commute = Commute.new(commute_params)
-    Rails.logger.info @commute.inspect
     directions = GoogleDirections.new(@commute.origin, @commute.destination)
     @commute.distance_in_miles = directions.distance_in_miles
     @commute.drive_time_in_minutes = directions.drive_time_in_minutes
-    Rails.logger.info directions.polylines
-    Rails.logger.info directions.polylines_as_points
+    # Rails.logger.info directions.polylines
+    # Rails.logger.info directions.polylines_as_points
     @commute.save!
-    Rails.logger.info @commute.persisted?
+    redirect_to root_path(commute_id: @commute.id)
+  end
+
+  def show
   end
 
   private
