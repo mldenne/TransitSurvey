@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# gem for Google Directions
+gem 'google_directions' 
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
