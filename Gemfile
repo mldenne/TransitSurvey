@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 
 # gem for Google Directions
-gem 'google_directions'
+gem 'polylines'
+gem 'google_directions', github: 'dummied/google-directions-ruby'
 
 # config gem
 gem 'figaro'
 
 # simple form
-gem 'simple_form'
+gem 'simple_form', github: 'kesha-antonov/simple_form', branch: 'rails-5-0'
 
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
