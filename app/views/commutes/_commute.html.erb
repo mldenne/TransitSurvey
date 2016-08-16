@@ -2,7 +2,12 @@
   <div class="col-md-2">
   </div>
   <div class="col-md-10">
-    In a week, you spend <%= commute.drive_time_per_week %> minutes commuting.
+    <p>Given a 5 day workweek with 2 trips per day:</p>
+    <p>You drive <%= commute.distance_per_day %> miles per day, for a total of <%= commute.distance_per_week %> miles per week.</p>
+    <p>This means you are spending <%= commute.drive_minutes_per_week %> minutes or <%= commute.drive_hours_per_week %> hours commuting in your car every week.</p>
+    <p>And what does this cost you, according to the IRS 2016 Standard Mileage Rates for Business?</p>
+    <p>Approximately, $<%= commute.drive_cost_per_week %>.</p>
+
   </div>
 
 </div>

@@ -19,9 +19,6 @@ class CommutesController < ApplicationController
     redirect_to root_path(commute_id: @commute.id)
   end
 
-  def show
-  end
-
   private
 
   def commute_params
