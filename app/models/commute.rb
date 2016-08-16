@@ -17,7 +17,7 @@ class Commute < ApplicationRecord
   end
 
   def drive_cost_per_week
-    distance_per_week * 0.54
+    (distance_per_week * 0.54).round(0)
   end
 
 end
