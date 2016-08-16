@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # gem for Google Directions
-gem 'google_directions', github: 'dummied/google-directions-ruby'
+gem 'google_directions'
 
 # config gem
 gem 'figaro'
