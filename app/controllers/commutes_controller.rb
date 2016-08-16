@@ -10,7 +10,7 @@ class CommutesController < ApplicationController
   end
 
   def create
-  
+
   end
 
   private
