@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  start_addr: MyString
-  end_addr: MyString
+  origin: MyString
+  destination: MyString
   distance_in_miles: 1
   drive_time_in_minutes: 1
 
 two:
-  start_addr: MyString
-  end_addr: MyString
+  origin: MyString
+  destination: MyString
   distance_in_miles: 1
   drive_time_in_minutes: 1
