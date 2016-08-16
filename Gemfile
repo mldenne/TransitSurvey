@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 # gem for Google Directions
-gem 'google_directions'
+gem 'google_directions', github: 'dummied/google-directions-ruby'
 
 # config gem
-gem 'figaro' 
+gem 'figaro'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
