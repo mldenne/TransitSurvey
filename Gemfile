@@ -13,6 +13,8 @@ gem 'simple_form', github: 'kesha-antonov/simple_form', branch: 'rails-5-0'
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'geokit'
+
 gem 'pry-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
