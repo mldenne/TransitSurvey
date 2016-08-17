@@ -1,5 +1,7 @@
 class Commute < ApplicationRecord
 
+  has_many :points
+
   def distance_per_day
     distance_in_miles * 2
   end
