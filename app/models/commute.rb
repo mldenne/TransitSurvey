@@ -1,6 +1,21 @@
 class Commute < ApplicationRecord
 
   has_many :points, dependent: :destroy
+  validates :origin_cannot_be_outside_indianapolis, :destination_cannot_be_outside_indianapolis
+
+  def origin_cannot_be_outside_indianapolis
+    res = Geokit::Geocoders::GoogleGeocoder.geocode('Indianapolis, IN')
+    if res && commute.distance_in_miles > 100
+      errors.add(:origin, "Origin cannot be more than 100 miles outside of Indianapolis")
+    end
+  end
+
+  def destination_cannot_be_outside_indianapolis
+    res = Geokit::Geocoders::GoogleGeocoder.geocode('Indianapolis, IN')
+    if res && commute.distance_in_miles > 100
+      errors.add(:destination, "Origin cannot be more than 100 miles outside of Indianapolis")
+    end
+  end
 
   def distance_per_day
     distance_in_miles * 2
