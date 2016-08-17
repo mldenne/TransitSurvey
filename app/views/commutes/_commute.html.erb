@@ -1,10 +1,11 @@
 <div class="container">
   <div class="jumbotron">
-    <h3>Your weekly commute stats are as follows:</h3>
+    <h3>Your commute stats are as follows:</h3>
     <p>Based on Google Maps shortest route calculations and a 5 day workweek with 2 commutes per day:</p>
     <p>Your commute is <%= commute.distance_in_miles %> miles per trip for a total of <%= commute.distance_per_day %> miles per day or <%= commute.distance_per_week %> miles per week.</p>
-    <p>You are spending <%= commute.drive_minutes_per_week %> minutes in your car and <%= commute.drive_hours_per_week %> hours commuting every week. For a grand total of <%= commute.drive_days_per_year %> days per year!</p>
-    <p>What is the approximate cost to you? Using the IRS 2016 Standard Mileage Rate for Business. At $0.54 per mile:</p>
+    <p>You are spending <%= commute.drive_minutes_per_week %> minutes in your car and <%= commute.drive_hours_per_week %> hours commuting every week for a grand total of <%= commute.drive_days_per_year %> days per year!</p>
+    <p>What is the approximate cost to you?</p>
+    <p>Using the IRS 2016 Standard Mileage Rate for Business. At $0.54 per mile:</p>
     <p>You spend $<%= commute.drive_cost_per_week %> per week for a total of $<%= commute.drive_cost_per_year %> per year for your commute.</p>
     <%= link_to 'Calculate another route', new_commute_path, class: "btn btn-info" %>
   </div>
