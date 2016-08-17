@@ -1,0 +1,13 @@
+<form class="form-horizontal">
+    <%= simple_form_for @commute do |f| %>
+      <div class="form-group">
+        <%= f.input :origin, label: 'Origin address:', placeholder: '475 E Market St, 46204', error: 'Origin address is required' %>
+      </div>
+      <div class="form-group">
+        <%= f.input :destination, label: 'Destination address:', placeholder: '475 E Market St. 46204', error: 'Destination address is required' %>
+      </div>
+      <div class="form-group">
+        <%= f.button :submit, "Calculate transit data", class: "btn btn-default" %>
+      </div>
+    <% end %>
+</form>
