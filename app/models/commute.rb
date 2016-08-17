@@ -1,6 +1,6 @@
 class Commute < ApplicationRecord
 
-  has_many :points
+  has_many :points, dependent: :destroy
 
   def distance_per_day
     distance_in_miles * 2

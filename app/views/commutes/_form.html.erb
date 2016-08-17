@@ -9,10 +9,10 @@
     </div>
     <%= simple_form_for @commute do |f| %>
       <div class="form-group">
-        <%= f.input :origin, label: 'Origin address:', placeholder: 'Enter an ORIGIN address, e.g. 111 S Main St, Anytown, IN 11011 (city and state are optional)', error: 'Origin address is required' %>
+        <%= f.input :origin, label: 'Origin address:', placeholder: 'Enter an ORIGIN address, e.g. 111 S Main St, Indianapolis, IN 46000 (city and state are optional)', error: 'Origin address is required' %>
       </div>
       <div class="form-group">
-        <%= f.input :destination, label: 'Destination address:', placeholder: 'Enter an DESTINATION address, e.g. 111 S Main St, Anytown, IN 11011 (city and state are optional)', error: 'Destination address is required' %>
+        <%= f.input :destination, label: 'Destination address:', placeholder: 'Enter an DESTINATION address, e.g. 111 S Main St, Indianapolis, IN 46000 (city and state are optional)', error: 'Destination address is required' %>
       </div>
       <div class="form-group">
         <%= f.button :submit, "Calculate transit data", class: "btn btn-info" %>
