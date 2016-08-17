@@ -16,6 +16,9 @@ class CommutesController < ApplicationController
     # Rails.logger.info directions.polylines
     # Rails.logger.info directions.polylines_as_points
     @commute.save!
+    directions.polylines_as_points.each do |x|
+      @commute.points << Point.new(lat: x.first, lng: x.last)
+    end
     redirect_to root_path(commute_id: @commute.id)
   end
 
