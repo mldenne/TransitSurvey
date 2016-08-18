@@ -10,16 +10,18 @@ class CommutesController < ApplicationController
 
   def create
     @commute = Commute.new(commute_params)
-    directions = GoogleDirections.new(@commute.origin, @commute.destination)
-    @commute.distance_in_miles = directions.distance_in_miles
-    @commute.drive_time_in_minutes = directions.drive_time_in_minutes
+    if @commute.valid?
+      directions = GoogleDirections.new(@commute.origin, @commute.destination)
+      @commute.distance_in_miles = directions.distance_in_miles
+      @commute.drive_time_in_minutes = directions.drive_time_in_minutes
+    end
     if @commute.save
       directions.polylines_as_points.each do |x|
         @commute.points << Point.new(lat: x.first, lng: x.last)
       end
       redirect_to root_path(commute_id: @commute.id)
     else
-      @commute = Commute.new
+      render :new
     end
   end
 

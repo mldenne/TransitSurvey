@@ -2,6 +2,10 @@
 @import "bootstrap";
 @import 'main';
 @import 'points';
+
+// body modifications, padding for fixed nav bar
+
 body {
-  background-color: #2374AB;
+  background-color: #9D8189;
+  padding-top: 70px;
 }

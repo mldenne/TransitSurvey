@@ -1,7 +1,10 @@
 class Commute < ApplicationRecord
 
   has_many :points, dependent: :destroy
-  validates :origin_cannot_be_outside_indianapolis, :destination_cannot_be_outside_indianapolis, presence: true
+
+  validates :origin, presence: true
+  validates :destination, presence: true
+  validate :origin_cannot_be_outside_indianapolis, :destination_cannot_be_outside_indianapolis
 
   def origin_cannot_be_outside_indianapolis
     indy_location = Geokit::Geocoders::GoogleGeocoder.geocode('Indianapolis, IN')
