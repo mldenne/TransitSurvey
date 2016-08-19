@@ -1,3 +1,15 @@
+/*font updates*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nova Flat', cursive;
+}
+
+p {
+  font-family: 'Mallanna', sans-serif;
+  font-size: 16px;
+}
+
+
 /*navbar modifications*/
 
 /*body {
