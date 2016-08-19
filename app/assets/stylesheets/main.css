@@ -12,10 +12,6 @@ p {
 
 /*navbar modifications*/
 
-/*body {
-  padding-top: 70px;
-}*/
-
 .navbar-inverse {
   background-color: #373d42;
 }
@@ -58,4 +54,19 @@ p {
 
 .jumbotron {
   background-color: #D5DDE2;
+}
+
+/*footer formatting*/
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #373d42;
+  height: 60px;
+}
+
+.footer a {
+  font-family: 'Nova Flat', cursive;
+  font-size: 18px;
+  color: #9d9d9d;
 }
