@@ -4,17 +4,19 @@
     <title>TransitSurvey</title>
     <%= csrf_meta_tags %>
 
+    <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class="<%= Rails.env %>">
-    <!-- <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
+    <div class="container">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
         <a class="navbar-brand" href="root_path">Indianapolis Transit Survey</a>
-      </div>
-    </nav> -->
+      </nav>
+    </div>
 
-    <%= yield %>
+          <%= yield %>
+
   </body>
 </html>

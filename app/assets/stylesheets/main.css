@@ -1,8 +1,22 @@
-/*padding for fixed navbar*/
+/*navbar modifications*/
 
 /*body {
   padding-top: 70px;
 }*/
+
+.navbar-inverse {
+  background-color: #373d42;
+}
+
+.navbar-brand {
+  font-family: 'Nova Flat', cursive;
+  font-size: 24px;
+}
+
+#map {
+  width: 100%;
+  height: 45vh;
+}
 
 /*jumbotron formatting*/
 
