@@ -53,9 +53,9 @@ p {
 /*jumbotron formatting*/
 
 .jumbotron p {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .jumbotron {
-  background-color: #F2FBE0;
+  background-color: #D5DDE2;
 }
