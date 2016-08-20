@@ -13,8 +13,14 @@ gem 'simple_form', github: 'kesha-antonov/simple_form', branch: 'rails-5-0'
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# Google map wrapper
 gem 'geokit'
 
+# for site Administration
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
+# console
 gem 'pry-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
