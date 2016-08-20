@@ -6,4 +6,5 @@
   <p>Using the <a href="https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS">2016 Standard Mileage Rate for Business</a> at $0.54 per mile:</p>
   <p>You spend <strong>$<%= commute.drive_cost_per_week %> per week</strong> for a total of <strong>$<%= commute.drive_cost_per_year %> per year</strong> for your commute.</p>
   <%= link_to 'Calculate another route', new_commute_path, class: "btn btn-primary" %>
+  <%= link_to 'View heatmap with your route', root_path, class: "btn btn-primary" %>
 </div>
