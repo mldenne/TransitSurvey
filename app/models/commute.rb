@@ -9,16 +9,16 @@ class Commute < ApplicationRecord
   def origin_cannot_be_outside_indianapolis
     indy_location = Geokit::Geocoders::GoogleGeocoder.geocode('Indianapolis, IN')
     origin_location = Geokit::Geocoders::GoogleGeocoder.geocode(self.origin)
-    if indy_location.distance_to(origin_location) > 100
-      errors.add(:origin, "Origin cannot be more than 100 miles outside of Indianapolis")
+    if indy_location.distance_to(origin_location) > 65
+      errors.add(:origin, "Origin cannot be more than 65 miles outside of Indianapolis")
     end
   end
 
   def destination_cannot_be_outside_indianapolis
     indy_location = Geokit::Geocoders::GoogleGeocoder.geocode('Indianapolis, IN')
     destination_location = Geokit::Geocoders::GoogleGeocoder.geocode(self.destination)
-    if indy_location.distance_to(destination_location) > 100
-      errors.add(:destination, "Destination cannot be more than 100 miles outside of Indianapolis")
+    if indy_location.distance_to(destination_location) > 65
+      errors.add(:destination, "Destination cannot be more than 65 miles outside of Indianapolis")
     end
   end
 
