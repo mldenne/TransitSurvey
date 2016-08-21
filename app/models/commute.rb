@@ -1,6 +1,7 @@
 class Commute < ApplicationRecord
 
   has_many :points, dependent: :destroy
+  has_many :textfiles
 
   validates :origin, presence: true
   validates :destination, presence: true
