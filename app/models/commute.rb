@@ -36,12 +36,12 @@ class Commute < ApplicationRecord
     self.drive_time_in_minutes = drive_time_in_minutes * 10
   end
 
-  def drive_hours_per_week
-    (drive_minutes_per_week / 60.0).round(2)
+  def save_drive_hours_per_week
+    self.drive_minutes_per_week = (save_drive_minutes_per_week / 60.0).round(2)
   end
 
-  def drive_days_per_year
-    ((drive_hours_per_week * 50) / 24.0).round(2)
+  def save_drive_days_per_year
+    self.drive_days_per_year = ((save_drive_hours_per_week * 50) / 24.0).round(2)
   end
 
   def drive_cost_per_week
