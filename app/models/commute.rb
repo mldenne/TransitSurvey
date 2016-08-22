@@ -15,6 +15,8 @@ class Commute < ApplicationRecord
               :save_drive_cost_per_week,
               :save_drive_cost_per_year
 
+  acts_as_mappable
+
   def origin_cannot_be_outside_indianapolis
     indy_location = Geokit::Geocoders::GoogleGeocoder.geocode('Indianapolis, IN')
     origin_location = Geokit::Geocoders::GoogleGeocoder.geocode(self.origin)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160822155254) do
+ActiveRecord::Schema.define(version: 20160822202326) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20160822155254) do
     t.integer  "drive_days_per_year"
     t.integer  "drive_cost_per_week"
     t.integer  "drive_cost_per_year"
+    t.float    "lat"
+    t.float    "lng"
   end
 
   create_table "points", force: :cascade do |t|
