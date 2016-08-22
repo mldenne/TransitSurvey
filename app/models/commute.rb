@@ -15,7 +15,7 @@ class Commute < ApplicationRecord
               :save_drive_cost_per_week,
               :save_drive_cost_per_year
 
-  acts_as_mappable
+  acts_as_mappable :auto_geocode=>{:field=>:origin, :error_message=>'Could not geocode address'}
 
   def origin_cannot_be_outside_indianapolis
     indy_location = Geokit::Geocoders::GoogleGeocoder.geocode('Indianapolis, IN')
@@ -32,6 +32,7 @@ class Commute < ApplicationRecord
       errors.add(:destination, "Destination cannot be more than 65 miles outside of Indianapolis")
     end
   end
+
 
   def save_distance_per_day
     self.distance_per_day = distance_in_miles * 2
