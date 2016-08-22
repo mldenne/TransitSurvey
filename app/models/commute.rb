@@ -48,8 +48,8 @@ class Commute < ApplicationRecord
     self.drive_cost_per_week = (save_distance_per_week * 0.54).round(0)
   end
 
-  def drive_cost_per_year
-    (drive_cost_per_week * 50).round(0)
+  def save_drive_cost_per_year
+    self.drive_cost_per_year = (save_drive_cost_per_week * 50).round(0)
   end
 
 end
