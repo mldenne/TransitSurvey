@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160822154817) do
+ActiveRecord::Schema.define(version: 20160822155034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160822154817) do
     t.integer  "drive_minutes_per_week"
     t.integer  "drive_hours_per_week"
     t.integer  "drive_days_per_year"
+    t.integer  "drive_cost_per_week"
   end
 
   create_table "points", force: :cascade do |t|
