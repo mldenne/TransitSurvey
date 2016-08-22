@@ -1,5 +1,12 @@
 RailsAdmin.config do |config|
 
+  config.authenticate_with do
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV["rails_admin_username"] &&
+      password == ENV["rails_admin_password"]
+    end
+  end
+
   ### Popular gems integration
 
   ## == Devise ==
