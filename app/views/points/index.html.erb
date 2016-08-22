@@ -1,5 +1,5 @@
 <div class="col-sm-3 left-sidebar-heatmap">
-  <%= simple_format(Textfile.find_by(filename: "left_sidebar_heatmap").content) %>
+  <%= simple_format(Textfile.content_for("left_sidebar_heatmap")) %>
 </div>
 <div class="col-sm-7">
   <h3>Heatmap for Indianapolis area - 60 mile radius</h3>
