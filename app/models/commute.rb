@@ -1,12 +1,19 @@
 class Commute < ApplicationRecord
 
-  has_many :points, dependent: :destroy
+  has_many    :points, dependent: :destroy
 
-  validates :origin, presence: true
-  validates :destination, presence: true
-  validate :origin_cannot_be_outside_indianapolis, :destination_cannot_be_outside_indianapolis
+  validates   :origin, presence: true
+  validates   :destination, presence: true
+  validate    :origin_cannot_be_outside_indianapolis,
+              :destination_cannot_be_outside_indianapolis, on: :create
 
-  before_save :save_distance_per_day
+  before_save :save_distance_per_day,
+              :save_distance_per_week,
+              :save_drive_minutes_per_week,
+              :save_drive_hours_per_week,
+              :save_drive_days_per_year,
+              :save_drive_cost_per_week,
+              :save_drive_cost_per_year
 
   def origin_cannot_be_outside_indianapolis
     indy_location = Geokit::Geocoders::GoogleGeocoder.geocode('Indianapolis, IN')
@@ -29,27 +36,27 @@ class Commute < ApplicationRecord
   end
 
   def save_distance_per_week
-    self.distance_per_day = save_distance_per_day * 5
+    self.distance_per_week = distance_per_day * 5
   end
 
   def save_drive_minutes_per_week
-    self.drive_time_in_minutes = drive_time_in_minutes * 10
+    self.drive_minutes_per_week = drive_time_in_minutes * 10
   end
 
   def save_drive_hours_per_week
-    self.drive_minutes_per_week = (save_drive_minutes_per_week / 60.0).round(2)
+    self.drive_hours_per_week = (drive_minutes_per_week / 60.0).round(2)
   end
 
   def save_drive_days_per_year
-    self.drive_days_per_year = ((save_drive_hours_per_week * 50) / 24.0).round(2)
+    self.drive_days_per_year = ((drive_hours_per_week * 50) / 24.0).round(2)
   end
 
   def save_drive_cost_per_week
-    self.drive_cost_per_week = (save_distance_per_week * 0.54).round(0)
+    self.drive_cost_per_week = (distance_per_week * 0.54).round(0)
   end
 
   def save_drive_cost_per_year
-    self.drive_cost_per_year = (save_drive_cost_per_week * 50).round(0)
+    self.drive_cost_per_year = (drive_cost_per_week * 50).round(0)
   end
 
 end
