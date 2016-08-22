@@ -28,8 +28,8 @@ class Commute < ApplicationRecord
     self.distance_per_day = distance_in_miles * 2
   end
 
-  def distance_per_week
-    distance_per_day * 5
+  def save_distance_per_week
+    self.distance_per_day * 5
   end
 
   def drive_minutes_per_week
