@@ -29,11 +29,11 @@ class Commute < ApplicationRecord
   end
 
   def save_distance_per_week
-    self.distance_per_day * 5
+    self.distance_per_day = save_distance_per_day * 5
   end
 
-  def drive_minutes_per_week
-    drive_time_in_minutes * 10
+  def save_drive_minutes_per_week
+    self.drive_time_in_minutes = drive_time_in_minutes * 10
   end
 
   def drive_hours_per_week
