@@ -86,6 +86,9 @@ GEM
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
     geokit (1.10.0)
+    geokit-rails (2.2.0)
+      geokit (~> 1.5)
+      rails (>= 3.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     haml (4.0.7)
@@ -230,6 +233,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   figaro
   geokit
+  geokit-rails
   google_directions!
   jbuilder (~> 2.5)
   jquery-rails

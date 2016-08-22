@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 # Google map wrapper
 gem 'geokit'
+gem 'geokit-rails'
 
 # for site Administration
 gem 'remotipart', github: 'mshibuya/remotipart'
