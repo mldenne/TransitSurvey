@@ -1,11 +1,12 @@
 class Commute < ApplicationRecord
 
   has_many :points, dependent: :destroy
-  has_many :textfiles
 
   validates :origin, presence: true
   validates :destination, presence: true
   validate :origin_cannot_be_outside_indianapolis, :destination_cannot_be_outside_indianapolis
+
+  before_save :distance_per_day
 
   def origin_cannot_be_outside_indianapolis
     indy_location = Geokit::Geocoders::GoogleGeocoder.geocode('Indianapolis, IN')
@@ -49,6 +50,12 @@ class Commute < ApplicationRecord
 
   def drive_cost_per_year
     (drive_cost_per_week * 50).round(0)
+  end
+
+  private
+
+  def save_distance_per_day
+    distance_per_day
   end
 
 end
