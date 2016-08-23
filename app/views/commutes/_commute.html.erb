@@ -1,10 +1,28 @@
 <div class="jumbotron">
-  <p>Based on Google Maps shortest route calculations and a 5 day workweek with 2 commutes per day:</p>
-  <p>Your commute is <strong><%= commute.distance_in_miles %> miles per trip</strong> for a total of <strong><%= commute.distance_per_day %> miles per day</strong> or <strong><%= commute.distance_per_week %> miles per week</strong>.</p>
-  <p>You are spending <strong><%= commute.drive_minutes_per_week %> minutes in your car</strong> and <strong><%= commute.drive_hours_per_week %> hours commuting every week</strong> for a grand total of <strong><%= commute.drive_days_per_year %> days per year</strong>!</p>
-  <p><em><strong>What is the approximate cost to you?</strong></em></p>
-  <p>Using the <a href="https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS">2016 Standard Mileage Rate for Business</a> at $0.54 per mile:</p>
-  <p>You spend <strong>$<%= commute.drive_cost_per_week %> per week</strong> for a total of <strong>$<%= commute.drive_cost_per_year %> per year</strong> for your commute.</p>
+  <h4>Commute Mileage</h4>
+  <p>One-way Distance: <strong><%= commute.distance_in_miles %> miles per trip</strong></p>
+  <p>Total per Day: <strong><%= commute.distance_per_day %> miles per day</strong></p>
+  <p>Weekly: <strong><%= commute.distance_per_week %> miles per week</strong></p>
+
+  <h4>Commute Time</h4>
+  <p>Minutes per Trip: <strong><%= commute.drive_time_in_minutes %> minutes per trip</strong></p>
+  <p>Hours per Week: <strong><%= commute.drive_hours_per_week %> total hours in your car</strong></p>
+  <p>Days per Year: <strong><%= commute.drive_days_per_year %> days per year</strong></p>
+
+  <h4>Commuters in Your Area</h4>
+  <p>Within a 5 mile radius: <strong><%= commute.number_of_closest_commuters %> commute to work</strong></p>
+  <p>Average daily commute: <strong><%= commute.average_distance_traveled_of_closest_commuters %> miles per one-way commute</strong></p>
+
+  <h4>Commuting Costs</h4>
+  <p>Weekly: <strong>$<%= commute.drive_cost_per_week %></strong></p>
+  <p>Yearly: <strong>$<%= commute.drive_cost_per_year %></strong></p>
+
+  <h4>Transit comparison</h4>
+  <p></p>
+
+  <p><small>Commute calculations are based on Google Maps shortest route calculations and a 5 day workweek with 2 commutes per day.</small></p>
+  <p><small>Cost calculations are based on the <a href="https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS">2016 Standard Mileage Rate for Business</a> at $0.54 per mile</small></p>
+
   <%= link_to 'Calculate another route', new_commute_path, class: "btn btn-primary" %>
   <%= link_to 'View heatmap with your route', root_path, class: "btn btn-primary" %>
 </div>

@@ -63,14 +63,11 @@ class Commute < ApplicationRecord
   end
 
   def number_of_closest_commuters
-    total_commuters = Commute.within(5, :origin => self.commute).count
-    if total_commuters == 1
-      puts "There is only 1 other commuter within a 5 mile radius of your origin location."
-    elsif total_commuters > 1
-      puts "There are #{total_commuters} commuters within a 5 mile radius your origin location."
-    else
-      puts "There are no commuters within a 5 mile radius of your origin location."
-    end
+    Commute.within(5, :origin => self.origin).count
+  end
+
+  def average_distance_traveled_of_closest_commuters
+    Commute.within(5, :origin => commute.origin).average(:distance_in_miles).to_s
   end
 
 end
