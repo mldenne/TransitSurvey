@@ -46,15 +46,9 @@ p {
   height: 60vh;
 }
 
-/*jumbotron formatting*/
+/*survey results formatting*/
 
-.jumbotron p {
-  font-size: 18px;
-}
 
-.jumbotron {
-  background-color: #D5DDE2;
-}
 
 /*footer formatting*/
 
