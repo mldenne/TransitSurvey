@@ -1,5 +1,7 @@
 class Commute < ApplicationRecord
 
+  # Transit comparative cost is hard-coded into the method. To calculate new data, go to https://www.transit.dot.gov/ntd and download the latest NTD Data/NTD Data Reports
+
   has_many    :points, dependent: :destroy
 
   validates   :origin, presence: true
@@ -68,6 +70,22 @@ class Commute < ApplicationRecord
 
   def average_distance_traveled_of_closest_commuters
     Commute.within(5, :origin => commute.origin).average(:distance_in_miles).to_s
+  end
+
+  def transit_cost_per_week
+    (2.342876994 * 10).round(2)
+  end
+
+  def transit_cost_per_year
+    (transit_cost_week * 50).round(2)
+  end
+
+  def savings_transit_cost_per_week
+    self.drive_cost_per_week - transit_cost_per_week
+  end
+
+  def savings_transit_cost_per_year
+    self.drive_cost_per_year - transit_cost_per_year
   end
 
 end

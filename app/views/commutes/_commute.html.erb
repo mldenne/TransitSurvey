@@ -17,11 +17,16 @@
   <p>Weekly: <strong>$<%= commute.drive_cost_per_week %></strong></p>
   <p>Yearly: <strong>$<%= commute.drive_cost_per_year %></strong></p>
 
-  <h4>Transit comparison</h4>
-  <p></p>
+  <h4>Transit Comparison</h4>
+  <p>Based on the 2016 the national average of $2.34 per trip and your commute costs:</p>
+  <p>Weekly Transit Cost: <strong>$<%= commute.transit_cost_per_week %></strong></p>
+  <p>Annual Transit Cost: <strong>$<%= commute.transit_cost_per_year %></strong></p>
+  <p>Weekly Savings: <strong>$<%= commute.savings_transit_cost_per_week %></strong></p>
+  <p>Annual Savings: <strong>$<%= commute.savings_transit_cost_per_year %></strong></p>
 
   <p><small>Commute calculations are based on Google Maps shortest route calculations and a 5 day workweek with 2 commutes per day.</small></p>
   <p><small>Cost calculations are based on the <a href="https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS">2016 Standard Mileage Rate for Business</a> at $0.54 per mile</small></p>
+  <p><small>Transit calculations are based on the <a href="https://www.transit.dot.gov/ntd">The National Transit Database of the Federal Transit Administration</a></small></p>
 
   <%= link_to 'Calculate another route', new_commute_path, class: "btn btn-primary" %>
   <%= link_to 'View heatmap with your route', root_path, class: "btn btn-primary" %>
