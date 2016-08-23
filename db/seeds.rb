@@ -8,3 +8,7 @@
 
 f = File.open("IndyDMA.txt")
 city = f.read.split("\n").sort
+
+city.each do |row|
+  Community.create!(row.to_hash)
+end
