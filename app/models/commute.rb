@@ -1,6 +1,7 @@
 class Commute < ApplicationRecord
 
-  # Transit comparative cost is hard-coded into the method. To calculate new data, go to https://www.transit.dot.gov/ntd and download the latest NTD Data/NTD Data Reports
+  # Cost calculations are hard-coded into the method, see method below. To find the most recent IRS Standard Mileage Rate for Business, go to https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS.
+  # Transit comparative cost is hard-coded into the method, see method below. To calculate new data, go to https://www.transit.dot.gov/ntd and download the latest NTD Data/NTD Data Reports
 
   has_many    :points, dependent: :destroy
 
@@ -56,8 +57,12 @@ class Commute < ApplicationRecord
     self.drive_days_per_year = ((drive_hours_per_week * 50) / 24.0).round(2)
   end
 
+  def irs_standard_mileage_rate # hard-coded IRS Standard Mileage Rate for Business
+    0.54
+  end
+
   def save_drive_cost_per_week
-    self.drive_cost_per_week = (distance_per_week * 0.54).round(0)
+    self.drive_cost_per_week = (distance_per_week * irs_standard_mileage_rate).round(0)
   end
 
   def save_drive_cost_per_year
@@ -69,15 +74,19 @@ class Commute < ApplicationRecord
   end
 
   def average_distance_traveled_of_closest_commuters
-    Commute.within(5, :origin => commute.origin).average(:distance_in_miles).to_s
+    Commute.within(5, :origin => self.origin).average(:distance_in_miles).to_s
+  end
+
+  def national_average_transit_cost # hard-coded NTD Transit Data for average US Transit Cost
+    (2.342876994).round(2)
   end
 
   def transit_cost_per_week
-    (2.342876994 * 10).round(2)
+    (national_average_transit_cost * 10).round(0)
   end
 
   def transit_cost_per_year
-    (transit_cost_week * 50).round(2)
+    (transit_cost_per_week * 50).round(0)
   end
 
   def savings_transit_cost_per_week

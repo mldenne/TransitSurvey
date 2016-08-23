@@ -1,32 +1,98 @@
-<div class="jumbotron">
-  <h4>Commute Mileage</h4>
-  <p>One-way Distance: <strong><%= commute.distance_in_miles %> miles per trip</strong></p>
-  <p>Total per Day: <strong><%= commute.distance_per_day %> miles per day</strong></p>
-  <p>Weekly: <strong><%= commute.distance_per_week %> miles per week</strong></p>
-
-  <h4>Commute Time</h4>
-  <p>Minutes per Trip: <strong><%= commute.drive_time_in_minutes %> minutes per trip</strong></p>
-  <p>Hours per Week: <strong><%= commute.drive_hours_per_week %> total hours in your car</strong></p>
-  <p>Days per Year: <strong><%= commute.drive_days_per_year %> days per year</strong></p>
-
-  <h4>Commuters in Your Area</h4>
-  <p>Within a 5 mile radius: <strong><%= commute.number_of_closest_commuters %> commute to work</strong></p>
-  <p>Average daily commute: <strong><%= commute.average_distance_traveled_of_closest_commuters %> miles per one-way commute</strong></p>
-
-  <h4>Commuting Costs</h4>
-  <p>Weekly: <strong>$<%= commute.drive_cost_per_week %></strong></p>
-  <p>Yearly: <strong>$<%= commute.drive_cost_per_year %></strong></p>
-
-  <h4>Transit Comparison</h4>
-  <p>Based on the 2016 the national average of $2.34 per trip and your commute costs:</p>
-  <p>Weekly Transit Cost: <strong>$<%= commute.transit_cost_per_week %></strong></p>
-  <p>Annual Transit Cost: <strong>$<%= commute.transit_cost_per_year %></strong></p>
-  <p>Weekly Savings: <strong>$<%= commute.savings_transit_cost_per_week %></strong></p>
-  <p>Annual Savings: <strong>$<%= commute.savings_transit_cost_per_year %></strong></p>
-
+<h3>Your Commute Stats</h3>
+<div class="well commute-stats">
+  <table class="table"><caption><h4>Miles Driven Commuting</h4></caption>
+    <thead>
+      <tr>
+        <th>One-way</th>
+        <th>Round trip</th>
+        <th>Weekly</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= commute.distance_in_miles %> miles</td>
+        <td><%= commute.distance_per_day %> miles</td>
+        <td><%= commute.distance_per_week %> miles</td>
+      </tr>
+    </tbody>
+  </table>
   <p><small>Commute calculations are based on Google Maps shortest route calculations and a 5 day workweek with 2 commutes per day.</small></p>
-  <p><small>Cost calculations are based on the <a href="https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS">2016 Standard Mileage Rate for Business</a> at $0.54 per mile</small></p>
-  <p><small>Transit calculations are based on the <a href="https://www.transit.dot.gov/ntd">The National Transit Database of the Federal Transit Administration</a></small></p>
+
+  <table class="table"><caption><h4>Time Spent Commuting</h4></caption>
+    <thead>
+      <tr>
+        <th>Time per Commute</th>
+        <th>Time per Week</th>
+        <th>Time per Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= commute.drive_time_in_minutes %> minutes</td>
+        <td><%= commute.drive_hours_per_week %> hours</td>
+        <td><%= commute.drive_days_per_year %> days</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table"><caption><h4>Other Commuters in Your Area</h4></caption>
+    <thead>
+      <tr>
+        <th>Within a 5 mile radius</th>
+        <th>Average Daily Commute</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= commute.number_of_closest_commuters %> commuters</td>
+        <td><%= commute.average_distance_traveled_of_closest_commuters %> miles per one-way commute</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table"><caption><h4>Costs of Commuting</h4></caption>
+    <thead>
+      <tr>
+        <th>Weekly</th>
+        <th>Annual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>$<%= commute.drive_cost_per_week %></td>
+        <td>$<%= commute.drive_cost_per_year %></td>
+      </tr>
+    </tbody>
+  </table>
+  <p><small>Cost calculations are based data from the <a href="https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS">2016 Standard Mileage Rate for Business of $<%= commute.irs_standard_mileage_rate %> per mile</a></small></p>
+
+  <table class="table"><caption><h4>Transit Cost Comparison</h4></caption>
+    <thead>
+      <tr>
+        <th>Weekly Transit Cost</th>
+        <th>Annual Transit Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>$<%= commute.transit_cost_per_week %></td>
+        <td>$<%= commute.transit_cost_per_year %></td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th>Weekly Savings</th>
+        <th>Annual Savings</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>$<%= commute.savings_transit_cost_per_week %></td>
+        <td>$<%= commute.savings_transit_cost_per_year %></td>
+      </tr>
+    </tbody>
+  </table>
+  <p><small>Transit calculations are based on data from the <a href="https://www.transit.dot.gov/ntd">The National Transit Database of the Federal Transit Administration</a> using the national average fare of $<%= commute.national_average_transit_cost %> per trip</small></p>
 
   <%= link_to 'Calculate another route', new_commute_path, class: "btn btn-primary" %>
   <%= link_to 'View heatmap with your route', root_path, class: "btn btn-primary" %>
