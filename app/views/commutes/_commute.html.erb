@@ -1,8 +1,8 @@
 <h3>Your Commute Stats</h3>
 <div class="well commute-stats">
-  <table class="table"><caption><h4>Miles Driven Commuting</h4></caption>
+  <table class="table table-condensed"><caption><h4>Miles Driven Commuting</h4></caption>
     <thead>
-      <tr>
+      <tr class="active">
         <th>One-way</th>
         <th>Round trip</th>
         <th>Weekly</th>
@@ -17,10 +17,10 @@
     </tbody>
   </table>
   <p><small>Commute calculations are based on Google Maps shortest route calculations and a 5 day workweek with 2 commutes per day.</small></p>
-
-  <table class="table"><caption><h4>Time Spent Commuting</h4></caption>
+  <hr>
+  <table class="table table-condensed"><caption><h4>Time Spent Commuting</h4></caption>
     <thead>
-      <tr>
+      <tr class="active">
         <th>Time per Commute</th>
         <th>Time per Week</th>
         <th>Time per Year</th>
@@ -34,10 +34,10 @@
       </tr>
     </tbody>
   </table>
-
-  <table class="table"><caption><h4>Other Commuters in Your Area</h4></caption>
+  <hr>
+  <table class="table table-condensed"><caption><h4>Other Commuters in Your Area</h4></caption>
     <thead>
-      <tr>
+      <tr class="active">
         <th>Within a 5 mile radius</th>
         <th>Average Daily Commute</th>
       </tr>
@@ -49,10 +49,10 @@
       </tr>
     </tbody>
   </table>
-
-  <table class="table"><caption><h4>Costs of Commuting</h4></caption>
+  <hr>
+  <table class="table table-condensed"><caption><h4>Costs of Commuting</h4></caption>
     <thead>
-      <tr>
+      <tr class="active">
         <th>Weekly</th>
         <th>Annual</th>
       </tr>
@@ -65,10 +65,10 @@
     </tbody>
   </table>
   <p><small>Cost calculations are based data from the <a href="https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS">2016 Standard Mileage Rate for Business of $<%= commute.irs_standard_mileage_rate %> per mile</a></small></p>
-
-  <table class="table"><caption><h4>Transit Cost Comparison</h4></caption>
+  <hr>
+  <table class="table table-condensed"><caption><h4>Transit Cost Comparison</h4></caption>
     <thead>
-      <tr>
+      <tr class="active">
         <th>Weekly Transit Cost</th>
         <th>Annual Transit Cost</th>
       </tr>
@@ -80,7 +80,7 @@
       </tr>
     </tbody>
     <thead>
-      <tr>
+      <tr class="active">
         <th>Weekly Savings</th>
         <th>Annual Savings</th>
       </tr>
