@@ -10,5 +10,5 @@ f = File.open("IndyDMA.txt")
 city = f.read.split("\n").sort
 
 city.each do |row|
-  Community.create!(row.to_hash)
+  Community.create!(city: row + ", IN") unless Community.exists?(city: row + ", IN")
 end
