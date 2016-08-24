@@ -43,7 +43,7 @@ p {
 
 #map {
   width: 100%;
-  height: 60vh;
+  height: 75vh;
 }
 
 /*survey results table formatting*/
@@ -56,6 +56,7 @@ td {
   text-align: center;
 }
 
+/*scroll bar for cities listed in communities index view*/
 .communities-scroll {
   height: 75vh;
   overflow: scroll;

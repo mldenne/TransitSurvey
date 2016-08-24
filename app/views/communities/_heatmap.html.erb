@@ -7,7 +7,7 @@
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 10,
-      center: {lat: 39.768403, lng: -86.158068}
+      center: {lat: <%= @community.lat %>, lng: <%= @community.lng %>}
     });
 
     heatmap = new google.maps.visualization.HeatmapLayer({
