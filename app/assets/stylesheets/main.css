@@ -46,8 +46,15 @@ p {
   height: 60vh;
 }
 
-/*survey results formatting*/
+/*survey results table formatting*/
+th {
+  text-align: center;
+  width: 33%;
+}
 
+td {
+  text-align: center;
+}
 
 
 /*footer formatting*/
