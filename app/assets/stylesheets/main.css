@@ -56,6 +56,10 @@ td {
   text-align: center;
 }
 
+.communities-scroll {
+  height: 75vh;
+  overflow: scroll;
+}
 
 /*footer formatting*/
 

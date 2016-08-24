@@ -1,7 +1,7 @@
 class CommunitiesController < ApplicationController
 
   def index
-    @community = Community.all
+    @communities = Community.all.sort
   end
 
   def show
