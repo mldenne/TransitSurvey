@@ -47,13 +47,26 @@ p {
 }
 
 /*table formatting commute data*/
-.commute-results th, td {
+.commute-results th {
+  text-align: center;
+  width: 33%;
+}
+
+.commute-results td {
   text-align: center;
   width: 33%;
 }
 
 /*table formatting commutes index*/
+.commutes-all th {
+  text-align: center;
+  width: 25%;
+}
 
+.commutes-all td {
+  text-align: center;
+  width: 25%;
+}
 
 /*table formatting community index*/
 .communities-results th, td {

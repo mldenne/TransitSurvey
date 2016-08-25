@@ -5,7 +5,7 @@
   <h3>Surrounding Communities with Commuters</h3>
   <p>Please select a city below to see a heatmap for commuters that have an origin address within a 5 mile radius of that city.</p>
   <div class="well communities-scroll">
-    <table class="table table-commutes">
+    <table class="table commutes-all">
       <thead>
         <tr>
           <th>Total Number of Commuters</th>
@@ -16,10 +16,10 @@
       </thead>
       <tbody>
         <tr>
-            <td><%= @commutes.count %></td>
-            <td><%= @commutes.average(:distance_in_miles).round(2).to_s %></td>
-            <td>$<%= @commutes.sum(:drive_cost_per_week) %></td>
-            <td>$<%= @commutes.sum(:drive_cost_per_year) %></td>
+          <td><%= @commutes.count %></td>
+          <td><%= @commutes.average(:distance_in_miles).round(2).to_s %></td>
+          <td>$<%= @commutes.sum(:drive_cost_per_week) %></td>
+          <td>$<%= @commutes.sum(:drive_cost_per_year) %></td>
         </tr>
       </tbody>
     </table>
