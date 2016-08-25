@@ -16,3 +16,14 @@ Commute calculations are based on Google Maps shortest route calculations and a 
 Cost calculations are based data from the https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS IRS 2016 Standard Mileage Rate for Business
 
 Transit calculations are based on data from the https://www.transit.dot.gov/ntd The National Transit Database of the Federal Transit Administration using the national average fare of
+
+Ruby Gems specifically used for this project
+* FriendlyID
+* geokit
+* geokit-rails
+* polylines
+* google_directions, with an [add-on??] provided by my instructor, Dummied
+
+for site Administration
+* remotipart
+* rails_admin
