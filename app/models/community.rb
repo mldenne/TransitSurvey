@@ -1,5 +1,8 @@
 class Community < ApplicationRecord
 
+  extend FriendlyId
+  friendly_id :city, use: :slugged
+
   acts_as_mappable :auto_geocode=>{:field=>:city, :error_message=>'Could not geocode address'}
 
   def commuters_within_range

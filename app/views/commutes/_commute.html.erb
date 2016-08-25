@@ -59,12 +59,12 @@
     </thead>
     <tbody>
       <tr>
-        <td>$<%= commute.drive_cost_per_week %></td>
-        <td>$<%= commute.drive_cost_per_year %></td>
+        <td><%= number_to_currency(commute.drive_cost_per_week) %></td>
+        <td><%= number_to_currency(commute.drive_cost_per_year) %></td>
       </tr>
     </tbody>
   </table>
-  <p><small>Cost calculations are based data from the <a href="https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS">2016 Standard Mileage Rate for Business of $<%= commute.irs_standard_mileage_rate %> per mile</a></small></p>
+  <p><small>Cost calculations are based data from the <a href="https://www.irs.gov/uac/newsroom/2016-standard-mileage-rates-for-business-medical-and-moving-announcedIRS">IRS 2016 Standard Mileage Rate for Business of $<%= commute.irs_standard_mileage_rate %> per mile</a></small></p>
   <hr>
   <table class="table table-condensed commute-results"><caption><h4>Transit Cost Comparison</h4></caption>
     <thead>
@@ -75,8 +75,8 @@
     </thead>
     <tbody>
       <tr>
-        <td>$<%= commute.transit_cost_per_week %></td>
-        <td>$<%= commute.transit_cost_per_year %></td>
+        <td><%= number_to_currency(commute.transit_cost_per_week) %></td>
+        <td><%= number_to_currency(commute.transit_cost_per_year) %></td>
       </tr>
     </tbody>
     <thead>
@@ -87,8 +87,8 @@
     </thead>
     <tbody>
       <tr>
-        <td>$<%= commute.savings_transit_cost_per_week %></td>
-        <td>$<%= commute.savings_transit_cost_per_year %></td>
+        <td><%= number_to_currency(commute.savings_transit_cost_per_week) %></td>
+        <td><%= number_to_currency(commute.savings_transit_cost_per_year) %></td>
       </tr>
     </tbody>
   </table>
