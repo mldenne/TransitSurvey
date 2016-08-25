@@ -18,7 +18,7 @@ gem 'geokit'
 gem 'geokit-rails'
 
 # for slugs
-gem 'friendly_id', '~> 5.1.0'
+gem 'friendly_id', github: 'norman/friendly_id'
 
 # for site Administration
 gem 'remotipart', github: 'mshibuya/remotipart'
