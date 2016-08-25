@@ -2,15 +2,28 @@
   <%= simple_format(Textfile.content_for("left_sidebar_communities")) %>
 </div>
 <div class="col-sm-8">
-  <h3>List of Cities in Indianapolis and Surrounding Communities</h3>
+  <h3>Surrounding Communities with Commuters</h3>
   <p>Please select a city below to see a heatmap for commuters that have an origin address within a 5 mile radius of that city.</p>
-  <div class="well">
-    <div class="communities-scroll">
-      <ul>
+  <div class="well communities-scroll">
+    <table class="table table-communities">
+      <thead>
+        <tr>
+          <th>City</th>
+          <th>Commuters</th>
+          <th>Average Commuter Miles</th>
+        </tr>
+      </thead>
+      <tbody>
         <% @communities.each do |community| %>
-          <li><%= link_to community.city, community_path(community.id) %></li>
+          <% if community.commuters_within_range_count > 0 %>
+          <tr>
+              <td><%= link_to community.city, community_path(community.id) %></td>
+              <td><%= community.commuters_within_range_count %></td>
+              <td><%= community.average_commuter_miles.round(1) %></td>
+          </tr>
+          <% end %>
         <% end %>
-      </ul>
-    </div>
+      </tbody>
+    </table>
   </div>
 </div>

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 f = File.open("IndyDMA.txt")
-city = f.read.split("\n").sort
+city = f.read.split("\n")
 
 city.each do |row|
   Community.create!(city: row + ", IN") unless Community.exists?(city: row + ", IN")

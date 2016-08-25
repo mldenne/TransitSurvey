@@ -1,7 +1,7 @@
 class CommutesController < ApplicationController
 
   def index
-    @commute = Commute.find(params[:commute_id])
+    @commutes = Commute.all
   end
 
   def new
@@ -23,6 +23,10 @@ class CommutesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @commute = Commute.find(params[:id])
   end
 
   private

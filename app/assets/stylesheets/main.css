@@ -46,7 +46,7 @@ p {
   height: 75vh;
 }
 
-/*survey results table formatting*/
+/*table formatting*/
 th {
   text-align: center;
   width: 33%;
@@ -56,7 +56,7 @@ td {
   text-align: center;
 }
 
-/*scroll bar for cities listed in communities index view*/
+/*communities index view*/
 .communities-scroll {
   height: 75vh;
   overflow: scroll;
