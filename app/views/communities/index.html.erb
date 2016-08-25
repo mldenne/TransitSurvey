@@ -1,14 +1,14 @@
-<div class="col-sm-2 left-sidebar-commutes">
+<div class="col-sm-2 left-sidebar-communities">
   <%= simple_format(Textfile.content_for("left_sidebar_communities")) %>
 </div>
 <div class="col-sm-8">
   <h3>Surrounding Communities with Commuters</h3>
   <p>Please select a city below to see a heatmap for commuters that have an origin address within a 5 mile radius of that city.</p>
   <div class="well communities-scroll">
-    <table class="table table-communities">
+    <table class="table communities-results">
       <thead>
         <tr>
-          <th>City</th>
+          <th class="column-left">City</th>
           <th>Commuters</th>
           <th>Average Commuter Miles</th>
         </tr>

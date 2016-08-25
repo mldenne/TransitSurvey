@@ -19,7 +19,7 @@ class CommutesController < ApplicationController
       directions.polylines_as_points.each do |x|
         @commute.points << Point.new(lat: x.first, lng: x.last)
       end
-      redirect_to commutes_path(commute_id: @commute.id)
+      redirect_to commute_path(@commute.id)
     else
       render :new
     end

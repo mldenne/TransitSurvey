@@ -46,15 +46,20 @@ p {
   height: 75vh;
 }
 
-/*table formatting*/
-th {
+/*table formatting commute data*/
+.commute-results th, td {
   text-align: center;
   width: 33%;
 }
 
-td {
-  text-align: center;
+/*table formatting commutes index*/
+
+
+/*table formatting community index*/
+.communities-results th, td {
+  text-align: left;
 }
+
 
 /*communities index view*/
 .communities-scroll {

@@ -1,0 +1,27 @@
+<div class="col-sm-2 left-sidebar-commutes">
+  <%= simple_format(Textfile.content_for("left_sidebar_commutes")) %>
+</div>
+<div class="col-sm-8">
+  <h3>Surrounding Communities with Commuters</h3>
+  <p>Please select a city below to see a heatmap for commuters that have an origin address within a 5 mile radius of that city.</p>
+  <div class="well communities-scroll">
+    <table class="table table-commutes">
+      <thead>
+        <tr>
+          <th>Total Number of Commuters</th>
+          <th>Average Commuter Miles</th>
+          <th>Total Weekly Monies Spent on Commuting</th>
+          <th>Total Annual Monies Spent on Commuting</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td><%= @commutes.count %></td>
+            <td><%= @commutes.average(:distance_in_miles).round(2).to_s %></td>
+            <td>$<%= @commutes.sum(:drive_cost_per_week) %></td>
+            <td>$<%= @commutes.sum(:drive_cost_per_year) %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
