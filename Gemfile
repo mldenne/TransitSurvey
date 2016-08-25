@@ -17,6 +17,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'geokit'
 gem 'geokit-rails'
 
+# for slugs
+gem 'friendly_id', '~> 5.1.0'
+
 # for site Administration
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
