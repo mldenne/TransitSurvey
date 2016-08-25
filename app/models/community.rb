@@ -14,4 +14,12 @@ class Community < ApplicationRecord
     commuters_within_range.average(:distance_in_miles)
   end
 
+  def total_commuter_drive_cost_per_week
+    commuters_within_range.sum(:drive_cost_per_week)
+  end
+
+  def total_commuter_drive_cost_per_year
+    commuters_within_range.sum(:drive_cost_per_year)
+  end
+
 end

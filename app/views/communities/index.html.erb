@@ -8,9 +8,11 @@
     <table class="table communities-results">
       <thead>
         <tr>
-          <th class="column-left">City</th>
+          <th>City</th>
           <th>Commuters</th>
-          <th>Average Commuter Miles</th>
+          <th>Average Miles (One-way)</th>
+          <th>Total Weekly Cost</th>
+          <th>Total Annual Cost</th>
         </tr>
       </thead>
       <tbody>
@@ -20,6 +22,8 @@
               <td><%= link_to community.city, community_path(community.id) %></td>
               <td><%= community.commuters_within_range_count %></td>
               <td><%= community.average_commuter_miles.round(1) %></td>
+              <td><%= number_to_currency(community.total_commuter_drive_cost_per_week) %></td>
+              <td><%= number_to_currency(community.total_commuter_drive_cost_per_year) %></td>
           </tr>
           <% end %>
         <% end %>

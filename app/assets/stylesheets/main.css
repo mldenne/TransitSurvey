@@ -71,6 +71,7 @@ p {
 /*table formatting community index*/
 .communities-results th, td {
   text-align: left;
+  width: 20%;
 }
 
 
