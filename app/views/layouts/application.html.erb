@@ -8,60 +8,83 @@
     <link href="https://fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body class="<%= Rails.env %>">
-    <div class="container">
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-        <a><%= link_to "Indianapolis Public Transit Survey", root_path, class: "navbar-brand" %> </a>
-      </nav>
-    </div>
-    <div class="container">
-      <div class="row">
-
+    <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <%= link_to "Indianapolis Public Transit Survey", root_path, class: "navbar-brand" %>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                          <%= link_to "Take the Survey", new_commute_path %>
+                        </li>
+                        <li>
+                          <%= link_to "Communities", communities_path %>
+                        </li>
+                        <li>
+                            <a href="#">Districts</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
 
       <%= yield %>
 
-        <div class="col-sm-2">
+        <!-- <div class="col-sm-2"> -->
           <!-- <div class="btn-group-vertical"> -->
-            <%= link_to 'Take the Transit Survey', new_commute_path, class: "btn btn-primary" %>
-            <%= link_to 'View Indianapolis Heatmap', root_path, class: "btn btn-primary" %>
-            <%= link_to 'Community Heatmaps', communities_path, class: "btn btn-primary" %>
-
-            <!-- <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Dropdown
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </div> -->
-          <!-- </div> -->
-        </div>
-      </div>
-    </div>
+            <!-- <%= link_to 'Take the Transit Survey', new_commute_path, class: "btn btn-primary" %> -->
+            <!-- <%= link_to 'View Indianapolis Heatmap', root_path, class: "btn btn-primary" %> -->
+            <!-- <%= link_to 'Community Heatmaps', communities_path, class: "btn btn-primary" %> -->
 
     <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="navbar-brand navbar-left">
-              <a class="footer-links" href="#">Add in image tag for Iron Yard</a>
-            </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="navbar-brand navbar-left">
+            <a class="footer-links" href="#">Add in image tag for Iron Yard</a>
           </div>
-          <div class="col-md-6">
-            <div class="navbar-brand navbar-right">
-              <a class="footer-links" href="#">Marie Denney</a>
-            </div>
+        </div>
+        <div class="col-md-6">
+          <div class="navbar-brand navbar-right">
+            <a class="footer-links" href="#">Marie Denney</a>
           </div>
         </div>
       </div>
     </footer>
 
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="javascripts/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="javascripts/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
   </body>
 </html>

@@ -1,8 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap.min';
 @import 'main';
 @import 'points';
 @import 'rrssb';
+@import 'full-slider';
 
 // * {
 //   border: solid 1px black;
@@ -13,7 +15,7 @@
 
 body {
   background-color: #9D8189;
-  padding-top: 70px;
+  padding-top: 50px;
   margin-bottom: 60px;
 }
 

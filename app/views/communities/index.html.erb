@@ -1,33 +1,37 @@
-<div class="col-sm-2 left-sidebar-communities">
-  <%= simple_format(Textfile.content_for("left_sidebar_communities")) %>
-</div>
-<div class="col-sm-8">
-  <h3>Surrounding Communities with Commuters</h3>
-  <p>Please select a city below to see a heatmap for commuters that have an origin address within a 5 mile radius of that city.</p>
-  <div class="well communities-scroll">
-    <table class="table communities-results">
-      <thead>
-        <tr>
-          <th>City</th>
-          <th>Commuters</th>
-          <th>Average Miles (One-way)</th>
-          <th>Total Weekly Cost</th>
-          <th>Total Annual Cost</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @communities.each do |community| %>
-          <% if community.commuters_within_range_count > 0 %>
-          <tr>
-              <td><%= link_to community.city, community %></td>
-              <td><%= community.commuters_within_range_count %></td>
-              <td><%= community.average_commuter_miles.round(1) %></td>
-              <td><%= number_to_currency(community.total_commuter_drive_cost_per_week) %></td>
-              <td><%= number_to_currency(community.total_commuter_drive_cost_per_year) %></td>
-          </tr>
-          <% end %>
-        <% end %>
-      </tbody>
-    </table>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2 left-sidebar-communities">
+      <%= simple_format(Textfile.content_for("left_sidebar_communities")) %>
+    </div>
+    <div class="col-sm-8">
+      <h3>Surrounding Communities with Commuters</h3>
+      <p>Please select a city below to see a heatmap for commuters that have an origin address within a 5 mile radius of that city.</p>
+      <div class="well communities-scroll">
+        <table class="table communities-results">
+          <thead>
+            <tr>
+              <th>City</th>
+              <th>Commuters</th>
+              <th>Average Miles (One-way)</th>
+              <th>Total Weekly Cost</th>
+              <th>Total Annual Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @communities.each do |community| %>
+              <% if community.commuters_within_range_count > 0 %>
+              <tr>
+                  <td><%= link_to community.city, community %></td>
+                  <td><%= community.commuters_within_range_count %></td>
+                  <td><%= community.average_commuter_miles.round(1) %></td>
+                  <td><%= number_to_currency(community.total_commuter_drive_cost_per_week) %></td>
+                  <td><%= number_to_currency(community.total_commuter_drive_cost_per_year) %></td>
+              </tr>
+              <% end %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
