@@ -21,6 +21,30 @@ p {
   font-size: 24px;
 }
 
+// carousel modifications
+
+.container.carousel-images {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: auto;
+  height: auto;
+  padding: 0px;
+  display: flex;
+}
+
+.carousel-images {
+  opacity: 0.8;
+}
+
+// need to find way to edit captions like this...
+.carousel-caption {
+  right: 15%;
+  left: 15%;
+  padding-bottom: 200px;
+}
+
 /*survey styles*/
 
 .well {
