@@ -5,7 +5,7 @@
   <p>For the purposes of this survey, we are making the assumption that most commonly followed routes are for commutes to and from work.</p>
   <p>After you fill in your origin and destination addresses, you will be taken to a page containing your commute stats. Thank you once again!</p>
 </div>
-<%= simple_form_for @commute do |f| %>
+<%= simple_form_for Commute.new do |f| %>
   <div class="form-group">
     <%= f.input :origin, label: 'Origin address:', placeholder: 'Enter an ORIGIN address, e.g. 111 S Main St, Indianapolis, IN 46000 (city and state are optional)' %>
   </div>
