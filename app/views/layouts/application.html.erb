@@ -21,13 +21,13 @@
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <%= link_to "Indianapolis Public Transit Survey", root_path, class: "navbar-brand" %>
+          <%= link_to "Indy Public Transit Survey", root_path, class: "navbar-brand" %>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <%= link_to "Take the Survey", new_commute_path, { 'data-toggle' => "modal", 'data-target' => "#TransitSurveyModal" } %>
+              <%= link_to "Take the Survey", new_commute_path, { 'data-remote' => false, 'data-toggle' => "modal", 'data-target' => "#TransitSurveyModal" } %>
             </li>
             <li>
               <%= link_to "Communities", communities_path %>
