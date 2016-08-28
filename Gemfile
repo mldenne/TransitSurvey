@@ -20,6 +20,9 @@ gem 'geokit-rails'
 # for slugs
 gem 'friendly_id', github: 'norman/friendly_id'
 
+# for markdown files
+gem 'kramdown', '~> 1.12'
+
 # for site Administration
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'

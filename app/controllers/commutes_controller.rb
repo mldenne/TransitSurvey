@@ -27,6 +27,7 @@ class CommutesController < ApplicationController
 
   def show
     @commute = Commute.find(params[:id])
+    @points = Point.all
   end
 
   private
