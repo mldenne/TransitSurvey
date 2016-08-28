@@ -12,26 +12,28 @@
     <div class="item active">
            <!-- Set the first background image using inline CSS below. -->
       <div class="container carousel-images">
-        <%= image_tag('light_rail') %>
-          <div class="carousel-caption">
-            <h1>Helping find ways to bring better public transportation options to the Indianapolis area</h1>
-          </div>
+        <%= image_tag('road') %>
+        <div class="carousel-caption">
+          <h1>What if you could save money, not stress over your time spent in traffic, and use your commute time for other, more productive endeavors?</h1>
+        </div>
       </div>
     </div>
     <div class="item">
            <!-- Set the second background image using inline CSS below. -->
-      <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-      <div class="carousel-caption">
-        <h1>Through the use of online surveys using mapping technologies to analyze their routes</h1>
-        <h2>Put image of survey and heatmap here</h2>
+      <div class="container carousel-images">
+        <%= image_tag('light_rail') %>
+          <div class="carousel-caption">
+            <h1>Is public transportation something you would consider?</h1>
+          </div>
       </div>
     </div>
     <div class="item">
            <!-- Set the third background image using inline CSS below. -->
       <div class="container carousel-images">
-        <%= image_tag('heatmap_image') %>
+        <%= image_tag('downtown4') %>
           <div class="carousel-caption">
-            <h1>Put image of other reporting available here</h1>
+            <h1>Take the Indy Public Transit Survey to see just how much time and money you spend commuting and the potential savings public transportation would provide!</h1>
+            <h1><%= link_to ">>> Take the Survey <<<", new_commute_path, class: "btn btn-default" %></h1>
           </div>
       </div>
     </div>
