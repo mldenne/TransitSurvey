@@ -12,7 +12,7 @@
     <div class="item active">
            <!-- Set the first background image using inline CSS below. -->
       <div class="container carousel-images">
-        <%= image_tag('road') %>
+        <%= image_tag('road', class: "img-responsive", alt: "Responsive Image") %>
         <div class="carousel-caption">
           <h1>What if you could save money, not stress over your time spent in traffic, and use your commute time for other, more productive endeavors?</h1>
         </div>
@@ -21,7 +21,7 @@
     <div class="item">
            <!-- Set the second background image using inline CSS below. -->
       <div class="container carousel-images">
-        <%= image_tag('light_rail') %>
+        <%= image_tag('light_rail', class: "img-responsive", alt: "Responsive Image") %>
           <div class="carousel-caption">
             <h1>Is public transportation something you would consider?</h1>
           </div>
@@ -30,7 +30,7 @@
     <div class="item">
            <!-- Set the third background image using inline CSS below. -->
       <div class="container carousel-images">
-        <%= image_tag('downtown4') %>
+        <%= image_tag('downtown4', class: "img-responsive", alt: "Responsive Image") %>
           <div class="carousel-caption">
             <h1>Take the Indy Public Transit Survey to see just how much time and money you spend commuting and the potential savings public transportation would provide!</h1>
             <h1><%= link_to ">>> Take the Survey <<<", new_commute_path, class: "btn btn-default" %></h1>
