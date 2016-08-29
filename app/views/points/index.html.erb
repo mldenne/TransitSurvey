@@ -1,15 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-4">
       <h3>What is a heatmap?</h3>
       <p>Edit explanation for heatmap</p>
-      <p>A heat map (or heatmap) is a graphical representation of data where the individual values contained in a matrix are represented as colors. (wiki)  </p>
+      <p>A heat map (or heatmap) is a graphical representation of data where the individual values contained in a matrix are represented as colors. A density function visualization is a heat map for representing the density of dots in a map. (wiki)  A heatmap is a visualization used to depict the intensity of data at geographical points. When the Heatmap Layer is enabled, a colored overlay will appear on top of the map. By default, areas of higher intensity will be colored red, and areas of lower intensity will appear green. (google API)</p>
+      <p>For the purpose of this study, this heatmap is a collection of latitude and longitute points, called polylines, along the route of the commuter. For example, for a 20 mile route from Plainfield, IN to downtown Indianapolis, there are approximately 800 latitudinal and longitudinal points (polylines) that are collected. These polylines are then added to the other polylines from all other routes and displayed on a single map. As more an more polylines are collect for the same latitude and longitude, the more dense the number of points becomes causing the map to turn from green to yellow to red.</p>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
       <h2>Heatmap for Commuters in the Indianapolis Area</h2>
       <%= render 'heatmap' %>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-1">
 
     </div>
   </div>
