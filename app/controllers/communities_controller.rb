@@ -1,7 +1,11 @@
 class CommunitiesController < ApplicationController
 
   def index
-    @communities = Community.all.sort
+    @communities = Community.all.order(city: :asc)
+    respond_to do |format|
+      format.html
+      format.csv { send_data @communities.to_csv }
+    end
   end
 
   def show

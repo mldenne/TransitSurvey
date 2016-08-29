@@ -25,4 +25,17 @@ class Community < ApplicationRecord
     commuters_within_range.sum(:drive_cost_per_year)
   end
 
+  def self.csv_headers
+    ["city", "commuters_within_range_count", "average_commuter_miles", "total_commuter_drive_cost_per_week", "total_commuter_drive_cost_per_year"]
+  end
+
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << csv_headers
+      all.each do |community|
+        csv << csv_headers.collect{ |method| community.send(method) }
+      end
+    end
+  end
+
 end
