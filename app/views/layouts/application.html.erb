@@ -63,13 +63,13 @@
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                   <li>
-                    <% unless current_page?('/pages/about') %>
-                      <%= link_to "About", 'pages/about' %>
+                    <% unless current_page?('/pages/about' || '/pages/contact') %>
+                      <%= link_to "About", '/pages/about' %>
                     <% end %>
                   </li>
                   <li>
-                    <% unless current_page?('/pages/contact') %>
-                      <%= link_to "Contact", 'pages/contact' %>
+                    <% unless current_page?('/pages/contact' || '/pages/about') %>
+                      <%= link_to "Contact", '/pages/contact' %>
                     <% end %>
                   </li>
                 </ul>
