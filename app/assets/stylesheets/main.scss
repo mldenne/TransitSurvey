@@ -24,12 +24,14 @@ p {
 // carousel modifications
 
 .container.carousel-images {
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-left: 0px;
   padding-right: 0px;
   margin-left: 0px;
   margin-right: 0px;
   width: auto;
-  height: auto;
+  height: 100%;
   padding: 0px;
   display: flex;
 }

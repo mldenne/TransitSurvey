@@ -10,8 +10,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <!-- Custom CSS -->
-    <link href="assets/full-slider.css" rel="stylesheet">
-    <link href="assets/rrssb.css" rel="stylesheet"/>
+    <!-- <link href="assets/full-slider.css" rel="stylesheet">
+    <link href="assets/rrssb.css" rel="stylesheet"/> -->
 
   </head>
 
@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <%= link_to "Take the Survey", new_commute_path, data: { 'data-remote' => false, 'data-toggle' => "modal", 'data-target' => "#TransitSurveyModal" } %>
+              <%= link_to "Take the Survey", new_commute_path, { 'data-remote' => false, 'data-toggle' => "modal", 'data-target' => "#TransitSurveyModal" } %>
             </li>
             <li>
               <% unless current_page?(points_path) %>
@@ -55,7 +55,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="nav navbar-brand navbar-left">
-              <a href="www.theironyard.com">Add in image tag for Iron Yard</a>
+              <a href="https://www.theironyard.com">Add in image tag for Iron Yard</a>
             </div>
           </div>
           <div class="col-md-5">
@@ -103,6 +103,11 @@
         interval: 8000 //changes the speed
     })
     </script>
+
+    <!-- This was script for the social media - pretty sure I don't need it -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery.1.10.2.min.js"><\/script>')</script> -->
+    <!-- <script src="/assets/javascripts/rrssb.js"></script> -->
 
   </body>
 </html>
