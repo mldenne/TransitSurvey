@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <%= link_to "Take the Survey", new_commute_path, { 'data-remote' => false, 'data-toggle' => "modal", 'data-target' => "#TransitSurveyModal" } %>
+              <a data-remote="false" data-toggle="modal" data-target="#TransitSurveyModal" href="#">Take the Survey</a>
             </li>
             <li>
               <% unless current_page?(points_path) %>
@@ -103,11 +103,6 @@
         interval: 8000 //changes the speed
     })
     </script>
-
-    <!-- This was script for the social media - pretty sure I don't need it -->
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-    <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery.1.10.2.min.js"><\/script>')</script> -->
-    <!-- <script src="/assets/javascripts/rrssb.js"></script> -->
 
   </body>
 </html>

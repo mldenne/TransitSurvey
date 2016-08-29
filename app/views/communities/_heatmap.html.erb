@@ -14,6 +14,12 @@
       data: getPoints(),
       map: map
     });
+
+    var marker = new google.maps.Marker({
+      position: {lat: <%= @community.lat %>, lng: <%= @community.lng %>},
+      map: map,
+      title: '<%= @community.city %>'
+    });
   }
 
   function toggleHeatmap() {
