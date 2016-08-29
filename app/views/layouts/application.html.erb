@@ -31,6 +31,11 @@
               <%= link_to "Take the Survey", new_commute_path, data: { 'data-remote' => false, 'data-toggle' => "modal", 'data-target' => "#TransitSurveyModal" } %>
             </li>
             <li>
+              <% unless current_page?(points_path) %>
+                <%= link_to "Heatmap", points_path %>
+              <% end %>
+            </li>
+            <li>
               <%= link_to "Communities", communities_path %>
             </li>
             <li>
@@ -48,7 +53,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="nav navbar-brand navbar-left">
-              <a class="footer-links" href="#">Add in image tag for Iron Yard</a>
+              <a href="www.theironyard.com">Add in image tag for Iron Yard</a>
             </div>
           </div>
           <div class="col-md-5">
@@ -56,10 +61,14 @@
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                   <li>
-                    <%= link_to "About", 'pages/about' %>
+                    <% unless current_page?('/pages/about') %>
+                      <%= link_to "About", 'pages/about' %>
+                    <% end %>
                   </li>
                   <li>
-                    <%= link_to "Contact", 'pages/contact' %>
+                    <% unless current_page?('/pages/contact') %>
+                      <%= link_to "Contact", 'pages/contact' %>
+                    <% end %>
                   </li>
                 </ul>
               </div>

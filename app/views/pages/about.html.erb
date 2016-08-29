@@ -1,44 +1,59 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h3>About the Developer and the Indy Public Transit Survey</h3>
+      <h3>About</h3>
     </div>
   </div>
   <div class="row author-bio">
     <div class="col-md-3">
-      <h4>About Marie Denney</h4>
+      <h4>About the Developer</h4>
       <%= image_tag('author_pic', class: "img-responsive", alt: "Responsive Image", class: "img-rounded") %>
     </div>
     <div class="col-md-9">
-      <h4>About Marie Denney</h4>
       <p>Hello! My name is Marie Denney and I am passionate about improving and bringing more public transportation options to Indianapolis, most specifically, a light rail system that would connect the suburbs to the heart of Indianapolis. I currently live in one of the steadily growing suburbs of Indianapolis and would glady use public transportation to get around, if it was made available to me. In my travels, I use public transporation whenever it is available, my favorite means being light rail and commuter rail systems. Both provide me with a way to enjoy my surroundings without having to worry about traffic and the cost of a rental car.</p>
-      <p>I recently completed a 12-week immersive software development program at The Iron Yard, Indianapolis Campus.</p>
+      <p>I recently completed a 12-week immersive Back End Engineering development program focusing on Ruby on Rails at The Iron Yard, Indianapolis Campus. For my final project, I expressed a desire to collect, analyze and disseminate commuter data for commuters in the Indianapolis area. As such, I created the Indy Public Transit Survey as a way to collect and disseminate data regarding the routes most frequently traveled by commuters.</p>
+      <p><%= link_to "Contact Me", 'contact', class: "btn btn-primary" %></p>
     </div>
     <hr>
   </div>
+  <hr>
   <div class="row app-bio">
     <div class="col-md-3">
       <h4>About the Indy Public Transit Survey</h4>
     </div>
     <div class="col-md-9">
-      <h4></h4>
-      <p>As a way to express my passion for public transportation I created the Indy Public Transit Survey as a way to collect and disseminate data regarding the routes most frequently traveled by commuters.</p>
+      <h5>For the commuter:</h5>
+      <p>With an origin and destination address provided by the commuter along with the Google Maps API, I constructed the app to show the commuter how much time they spend commuting as well as the costs associated with their commute. Then to demonstrate the benefits of public transportation, were it made available to the commuter, calculations were made to show how much potential money a commuter may save by using public transportation. For a visual representation, a heatmap provides a compliation of all routes, the heaviest marked in red.   </p>
+      <h5>For the decision makers:</h5>
+      <p>This information could potentially be used to help public transportation decision makers in their future decisions.</p>
     </div>
   </div>
-  <div class="row tech-used">
+  <hr>
+  <div class="row dev-used">
     <div class="col-md-3">
-      <h4></h4>
+      <h4>Development Tools</h4>
     </div>
     <div class="col-md-9">
-      <h4></h4>
-      <p></p>
+      <p>Rails combines the Ruby programming language with HTML, CSS, and JavaScript to create a web application that runs on a web server.</p>
+      <table>
+        <tbody>
+            <tr>
+              <td><%= image_tag('ruby-logo', width: "30%", class: "img-responsive", alt: "Responsive Image", display: "flex") %></td>
+              <td><%= image_tag('html-logo', width: "30%", class: "img-responsive", alt: "Responsive Image") %></td>
+              <td><%= image_tag('css-logo', width: "30%", class: "img-responsive", alt: "Responsive Image") %></td>
+              <td><%= image_tag('javascript-logo', width: "30%", class: "img-responsive", alt: "Responsive Image") %></td>
+              <td><%= image_tag('Ruby_on_Rails-logo', width: "30%", class: "img-responsive", alt: "Responsive Image") %></td>
+            </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
+  <hr>
   </div><div class="row other-info">
     <div class="col-md-3">
       <h4></h4>
     </div>
     <div class="col-md-9">
-      <h4></h4>
       <p></p>
     </div>
   </div>
