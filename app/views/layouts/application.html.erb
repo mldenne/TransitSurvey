@@ -36,7 +36,9 @@
               <% end %>
             </li>
             <li>
-              <%= link_to "Communities", communities_path %>
+              <% unless current_page?(communities_path) %>
+                <%= link_to "Communities", communities_path %>
+              <% end %>
             </li>
             <li>
                 <a href="#">Districts</a>
