@@ -21,6 +21,8 @@ class CommutesController < ApplicationController
       end
       redirect_to commute_path(@commute.id)
     else
+      @commute_errors = @commute
+      Rails.logger.info (@commute_errors.errors.full_messages)
       render :new
     end
   end
