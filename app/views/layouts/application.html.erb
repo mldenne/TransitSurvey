@@ -48,27 +48,15 @@
 
     <footer class="footer">
       <div class="container">
-        <nav class="navbar">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="navbar-nav navbar-brand navbar-left">
-                <a href="https://www.theironyard.com">Add in image tag for Iron Yard</a>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                  <li>
-                    <%= link_to "About", '/pages/about' unless current_page?('/pages/about') %>
-                  </li>
-                  <li>
-                    <%= link_to "Contact", '/pages/contact' unless current_page?('/pages/contact') %>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-md-10">
+            <a href="https://www.theironyard.com">Add in image tag for Iron Yard</a>
           </div>
           <div class="col-md-1">
+            <%= link_to "About", '/pages/about' unless current_page?('/pages/about') %>
+          </div>
+          <div class="col-md-1">
+            <%= link_to "Contact", '/pages/contact' unless current_page?('/pages/contact') %>
           </div>
         </div>
       </div>

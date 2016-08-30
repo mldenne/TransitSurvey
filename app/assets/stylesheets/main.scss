@@ -124,14 +124,19 @@ p {
   width: 100%;
   background-color: #373d42;
   height: 60px;
+  margin: 0 0;
 }
 
 .footer a {
   font-family: 'Francois One', sans-serif;
   font-size: 18px;
   color: #9d9d9d;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
 }
 
-li > a:hover, li > a:focus {
-  background-color: none;
+.footer a:hover {
+  text-decoration: none;
+  color: whitesmoke;
 }
