@@ -131,3 +131,7 @@ p {
   font-size: 18px;
   color: #9d9d9d;
 }
+
+li > a:hover, li > a:focus {
+  background-color: none;
+}
