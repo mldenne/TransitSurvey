@@ -48,6 +48,16 @@ p {
 
 /*survey styles*/
 
+.modal-header {
+  background-color: seagreen;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.modal-content {
+  background-color: darkseagreen;
+}
+
 .well {
   background-color: #D5DDE2;
   border: none;
@@ -55,8 +65,9 @@ p {
 
 .btn-primary {
   font-family: 'Francois One', sans-serif;
-  background-color: #534B62;
-  border-color: #534B62;
+  background-color: seagreen;
+  border-color: seagreen;
+  align-items: center;
 }
 
 .btn-primary:hover {
