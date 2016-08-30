@@ -1,4 +1,6 @@
 <p><strong><center>Please enter an origin and destination address below.</center></strong></p>
+<div id="errors_div"></div>
+
 <%= simple_form_for @commute_errors || Commute.new, remote: true do |f| %>
   <div class="form-group">
     <%= f.input :origin, label: 'Origin address:', placeholder: 'Enter an ORIGIN address (city and state are optional)' %>

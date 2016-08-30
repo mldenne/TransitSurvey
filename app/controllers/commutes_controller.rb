@@ -19,10 +19,12 @@ class CommutesController < ApplicationController
       directions.polylines_as_points.each do |x|
         @commute.points << Point.new(lat: x.first, lng: x.last)
       end
-      redirect_to commute_path(@commute.id)
+      respond_to do |format|
+        format.html { redirect_to commute_path(@commute.id) }
+        format.js
+      end
     else
       @commute_errors = @commute
-      Rails.logger.info (@commute_errors.errors.full_messages)
       render :new
     end
   end
