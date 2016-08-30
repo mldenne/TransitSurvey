@@ -5,7 +5,7 @@ gem 'polylines'
 gem 'google_directions', github: 'dummied/google-directions-ruby'
 
 # gems for Sunlight API
-gem 'sunlight', '~> 1.1'
+gem 'openstates'
 
 # config gem
 gem 'figaro'
