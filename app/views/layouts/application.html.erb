@@ -41,6 +41,10 @@
                 <li>
                   <%= link_to "Contact", '/pages/contact' unless current_page?('/pages/contact') %>
                 </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <%= link_to "Admin", 'admin' %>
+                </li>
               </ul>
           </ul>
         </div>
@@ -52,7 +56,8 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <center><a href="https://www.theironyard.com">Add in image tag for Iron Yard</a></center>
+            <center><a href="https://www.theironyard.com"><%= image_tag('TIIY-Logo-500px-white.png', width: "5%", class: "img-responsive", alt: "Responsive Image") %>
+</a></center>
           </div>
         </div>
       </div>

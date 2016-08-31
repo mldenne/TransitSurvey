@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :communities
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :points
   resources :commutes
+  resources :communities
 
   root 'pages#show', page: 'home'
 
