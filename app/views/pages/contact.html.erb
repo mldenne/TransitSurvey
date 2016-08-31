@@ -4,31 +4,22 @@
       <h3>Contact</h3>
     </div>
   </div>
-  <div class="row">
+  <div class="row email-address">
     <div class="col-md-2">
       <h4>Email:</h4>
     </div>
     <div class="col-md-6">
-      <p>add in email address, do I put in social media stuff??</p>
+      <%= Kramdown::Document.new(simple_format(Textfile.content_for("email_address"))).to_html.html_safe %>
     </div>
     <div class="col-md-4">
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-2">
-      <h4>LinkedIn:</h4>
-    </div>
-    <div class="col-md-6">
-      <p>add in linkedin account</p>
-    </div>
-    <div class="col-md-4">
-    </div>
-  </div><div class="row">
+  <div class="row github-account">
     <div class="col-md-2">
       <h4>GitHub:</h4>
     </div>
     <div class="col-md-6">
-      <p>add in GitHub account</p>
+      <%= Kramdown::Document.new(simple_format(Textfile.content_for("github_account"))).to_html.html_safe %>
     </div>
     <div class="col-md-4">
     </div>
