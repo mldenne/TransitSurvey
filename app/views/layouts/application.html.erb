@@ -21,23 +21,29 @@
           <%= link_to "Indy Public Transit Survey", root_path, class: "navbar-brand" %>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a data-toggle="modal" data-target="#TransitSurveyModal" href="#">Take the Survey</a>
-            </li>
-            <li>
-              <%= link_to "Heatmap", points_path unless current_page?(points_path) %>
-            </li>
-            <li>
-              <%= link_to "Communities", communities_path unless current_page?(communities_path) %>
-            </li>
-            <li>
-                <a href="#">Districts</a>
-            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a data-toggle="modal" data-target="#TransitSurveyModal" href="#">Take the Survey</a>
+                </li>
+                <li>
+                  <%= link_to "Indy Heatmap", points_path unless current_page?(points_path) %>
+                </li>
+                <li>
+                  <%= link_to "Communities", communities_path unless current_page?(communities_path) %>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <%= link_to "About", '/pages/about' unless current_page?('/pages/about') %>
+                </li>
+                <li>
+                  <%= link_to "Contact", '/pages/contact' unless current_page?('/pages/contact') %>
+                </li>
+              </ul>
           </ul>
         </div>
-      </div>
     </nav>
 
     <%= yield %>
@@ -45,14 +51,8 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-10">
-            <a href="https://www.theironyard.com">Add in image tag for Iron Yard</a>
-          </div>
-          <div class="col-md-1">
-            <%= link_to "About", '/pages/about' unless current_page?('/pages/about') %>
-          </div>
-          <div class="col-md-1">
-            <%= link_to "Contact", '/pages/contact' unless current_page?('/pages/contact') %>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <center><a href="https://www.theironyard.com">Add in image tag for Iron Yard</a></center>
           </div>
         </div>
       </div>
