@@ -9,7 +9,7 @@
       <h4>Email:</h4>
     </div>
     <div class="col-md-6">
-      <%= Kramdown::Document.new(simple_format(Textfile.content_for("email_address"))).to_html.html_safe %>
+      <%= Textfile.content_for("email_address") %>
     </div>
     <div class="col-md-4">
     </div>
@@ -19,7 +19,7 @@
       <h4>GitHub:</h4>
     </div>
     <div class="col-md-6">
-      <%= Kramdown::Document.new(simple_format(Textfile.content_for("github_account"))).to_html.html_safe %>
+      <%= Textfile.content_for("github_account") %>
     </div>
     <div class="col-md-4">
     </div>

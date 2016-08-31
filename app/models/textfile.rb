@@ -1,7 +1,7 @@
 class Textfile < ApplicationRecord
 
   def self.content_for(filename)
-    self.find_by(filename: filename).content
+    Kramdown::Document.new(self.find_by(filename: filename).content).to_html.html_safe
   end
 
 end
