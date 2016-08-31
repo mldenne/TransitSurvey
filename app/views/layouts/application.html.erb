@@ -43,7 +43,7 @@
                 </li>
                 <li role="separator" class="divider"></li>
                 <li>
-                  <%= link_to "Admin", 'admin' %>
+                  <%= link_to "Admin", 'admin' unless current_page?('/pages/contact' || '/pages/about') %>
                 </li>
               </ul>
           </ul>
