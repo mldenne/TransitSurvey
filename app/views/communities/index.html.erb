@@ -4,9 +4,10 @@
       <%= Textfile.content_for("left_sidebar_communities") %>
     </div>
     <div class="col-sm-10">
-      <h3>Surrounding Communities with Commuters</h3>
-      <p>Please select a city below to see a heatmap for commuters that have an origin address within a 5 mile radius of that city.</p>
-      <p>Download: <%= link_to "CSV", communities_path(format: "csv") %></p>
+      <h2><center>What are your Neighbors' commutes?</center></h2>
+      <h4><center>Compare and contrast your commuter stats with those around you!</center></h4>
+      <p><center>Click on a city name to see a heatmap for the commuters within a 5-mile radius of a city's center.</center></p>
+      <p><center>Would you like a file containing this information? Click here to <%= link_to "Download a CSV", communities_path(format: "csv") %></center></p>
       <div class="well communities-scroll">
         <table class="table communities-results">
           <thead>
