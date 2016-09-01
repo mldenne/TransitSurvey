@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-2 left-sidebar-communities">
-      <%= Textfile.content_for("left_sidebar_communities") %>  
+      <%= Textfile.content_for("left_sidebar_communities") %>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-10">
       <h3>Surrounding Communities with Commuters</h3>
       <p>Please select a city below to see a heatmap for commuters that have an origin address within a 5 mile radius of that city.</p>
       <p>Download: <%= link_to "CSV", communities_path(format: "csv") %></p>
@@ -12,10 +12,12 @@
           <thead>
             <tr>
               <th>City</th>
-              <th>Commuters</th>
-              <th>Average Miles (One-way)</th>
-              <th>Total Weekly Cost</th>
-              <th>Total Annual Cost</th>
+              <th><center>Commuters</center></th>
+              <th><center>Average Commute</center></th>
+              <th style="text-align:right">Average Weekly Cost</th>
+              <th style="text-align:right">Total Weekly Cost</th>
+              <th style="text-align:right">Average Annual Cost</th>
+              <th style="text-align:right">Total Annual Cost</th>
             </tr>
           </thead>
           <tbody>
@@ -23,10 +25,12 @@
               <% if community.commuters_within_range_count > 0 %>
               <tr>
                   <td><%= link_to community.city, community %></td>
-                  <td><%= community.commuters_within_range_count %></td>
-                  <td><%= community.average_commuter_miles.round(1) %></td>
-                  <td><%= number_to_currency(community.total_commuter_drive_cost_per_week) %></td>
-                  <td><%= number_to_currency(community.total_commuter_drive_cost_per_year) %></td>
+                  <td><center><%= community.commuters_within_range_count %></center></td>
+                  <td><center><%= community.average_commuter_miles.round(1) %></center></td>
+                  <td style="text-align:right"><%= number_to_currency(community.average_commuter_drive_cost_per_week) %></td>
+                  <td style="text-align:right"><%= number_to_currency(community.total_commuter_drive_cost_per_week) %></td>
+                  <td style="text-align:right"><%= number_to_currency(community.average_commuter_drive_cost_per_year) %></td>
+                  <td style="text-align:right"><%= number_to_currency(community.total_commuter_drive_cost_per_year) %></td>
               </tr>
               <% end %>
             <% end %>
