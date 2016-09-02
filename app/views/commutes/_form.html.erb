@@ -11,6 +11,8 @@
   <div class="form-group">
     <%= f.button :submit, "Calculate transit data", class: "btn btn-primary center-block" %>
   </div>
+  <%= image_tag('gears.gif', id: "loading-indicator", style: "display:none") %>
 <% end %>
+
 
 <p><small>The data collected from this survey is being used to determine where the need for public transportation might exist. No personal information will be collected from this data, only data points based on an origin address, destination address, and the shortest route in-between each address.</small></p>
