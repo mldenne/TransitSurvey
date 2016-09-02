@@ -16,9 +16,8 @@ class CommutesController < ApplicationController
       @commute.drive_time_in_minutes = directions.drive_time_in_minutes
     end
     if @commute.save
-      directions.polylines_as_points.each do |x|
-        @commute.points << Point.new(lat: x.first, lng: x.last)
-      end
+      points = directions.polylines_as_points.collect { |x| Point.new(commute: @commute, lat: x.first, lng: x.last) }
+      Point.import points
       respond_to do |format|
         format.html { redirect_to commute_path(@commute.id) }
         format.js
