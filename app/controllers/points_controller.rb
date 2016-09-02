@@ -2,6 +2,7 @@ class PointsController < ApplicationController
 
   def index
     @points = Point.all
+    @commutes = Commute.all
   end
 
   def show
