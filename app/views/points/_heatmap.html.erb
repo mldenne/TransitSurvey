@@ -15,13 +15,13 @@
       map: map
     });
 
-    var marker = new google.maps.Marker({
-      position: {lat: 39.768403, lng: -86.158068},
-      map: map,
-      draggable: true,
-      animation: google.maps.Animation.DROP,
-      title: 'Indianapolis, IN'
-    });
+    // var marker = new google.maps.Marker({
+    //   position: {lat: 39.768403, lng: -86.158068},
+    //   map: map,
+    //   draggable: true,
+    //   animation: google.maps.Animation.DROP,
+    //   title: 'Indianapolis, IN'
+    // });
 
     <% if (params[:controller] == 'commutes') && (params[:action] == 'show') %>
       var directionsDisplay;
