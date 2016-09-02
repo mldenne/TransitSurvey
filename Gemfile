@@ -4,6 +4,9 @@ source 'https://rubygems.org'
 gem 'polylines'
 gem 'google_directions', github: 'dummied/google-directions-ruby'
 
+# active record import
+gem 'activerecord-import', '~> 0.15.0'
+
 # gems for Sunlight API
 gem 'openstates'
 

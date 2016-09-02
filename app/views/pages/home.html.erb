@@ -12,10 +12,12 @@
     <div class="item active">
            <!-- Set the first background image using inline CSS below. -->
       <div class="container carousel-images">
-        <%= image_tag('road.jpg', class: "img-responsive", alt: "Responsive Image") %>
-        <div class="carousel-caption">
-          <h1>What if you could save money, not stress over your time spent in traffic, and use your commute time for other, more productive endeavors?</h1>
-        </div>
+        <%= image_tag('downtown4.jpg', class: "img-responsive", alt: "Responsive Image") %>
+          <div class="carousel-caption">
+            <h1>If you could save time and money as well as lower your stress levels by using public transportation, would you?</h1>
+            <h2>Take the survey to find out how much time and money you spend on your work commute!</h2>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#TransitSurveyModal" href="#">>>> Take the Survey <<<</button>
+          </div>
       </div>
     </div>
     <div class="item">
@@ -23,18 +25,19 @@
       <div class="container carousel-images">
         <%= image_tag('light_rail.jpg', class: "img-responsive", alt: "Responsive Image") %>
           <div class="carousel-caption">
-            <h1>Is public transportation something you would consider?</h1>
+            <h1>What are your Neighbors' commutes?</h1>
+            <h2>Compare and contrast your commuter stats with those around you!</h2>
+            <%= link_to ">>> Communities <<<", communities_path, class: "btn btn-primary btn-lg" %>
           </div>
       </div>
     </div>
     <div class="item">
            <!-- Set the third background image using inline CSS below. -->
       <div class="container carousel-images">
-        <%= image_tag('downtown4.jpg', class: "img-responsive", alt: "Responsive Image") %>
-          <div class="carousel-caption">
-            <h1>Take the Indy Public Transit Survey to see just how much time and money you spend commuting and the potential savings public transportation would provide!</h1>
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#TransitSurveyModal" href="#">>>> Take the Survey <<<</button>
-          </div>
+        <%= image_tag('road.jpg', class: "img-responsive", alt: "Responsive Image") %>
+        <div class="carousel-caption">
+          <h1>What if you could save money, not stress over your time spent in traffic, and use your commute time for other, more productive endeavors?</h1>
+        </div>
       </div>
     </div>
    </div>
