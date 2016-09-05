@@ -1,52 +1,49 @@
+<!-- Jumbotron -->
 <div class="container contact-page">
+  <div class="jumbotron">
+    <h1>Want to get more involved?</h1>
+    <%= Textfile.content_for("more_info_page") %>
+  </div>
+
+  <!-- Example row of columns -->
   <div class="row">
-    <div class="col-md-12">
-      <h3>Contact</h3>
+    <div class="col-lg-4">
+      <h2>Current Indianapolis Public Transportation</h2>
+      <p>[Links to be inserted]</p>
     </div>
-  </div>
-  <div class="row email-address">
-    <div class="col-md-2">
-      <h4>Email the developer:</h4>
-    </div>
-    <div class="col-md-6">
-      <%= Textfile.content_for("email_address") %>
-    </div>
-    <div class="col-md-4">
-    </div>
-  </div>
-  <div class="row github-account">
-    <div class="col-md-2">
-      <h4>GitHub:</h4>
-    </div>
-    <div class="col-md-6">
-      <%= Textfile.content_for("github_account") %>
-    </div>
-    <div class="col-md-4">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-6">
-    </div>
-    <div class="col-md-4">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-6">
-    </div>
-    <div class="col-md-4">
-    </div>
-  </div>
-  <div class="row about-public-transportation">
-    <div class="col-md-2">
-      <h4>For more information about Public Transportation in Indianapolis:</h4>
-    </div>
-    <div class="col-md-6">
-    </div>
-    <div class="col-md-4">
+    <div class="col-lg-4">
+      <h2>Public Awareness Groups/Organizations</h2>
+      <p>[Links to be inserted]</p>
+   </div>
+    <div class="col-lg-4 suggestions">
+      <h2>What other public transit data would you like to see?</h2>
+      <%= Textfile.content_for("suggestions") %>
+      <h4>For general suggestions:</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Send me an email: </p>
+          </div>
+          <div class="col-md-6">
+            <%= mail_to(Textfile.content_for("email_address")) %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Follow me on Twitter: </p>
+          </div>
+          <div class="col-md-6">
+            <%= Textfile.content_for("twitter_account") %>
+          </div>
+      </div>
+      <h4>For developers interested in this project:</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Fork the GitHub repository: </p>
+        </div>
+        <div class="col-md-6">
+          <p>...</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

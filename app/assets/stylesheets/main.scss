@@ -157,8 +157,15 @@ a.dropdown-toggle:hover {
   overflow: scroll;
 }
 
-.contact-page {
-  height: 100%;
+// contact page formatting
+
+// .contact-page {
+//   height: 100%;
+// }
+
+.contact-page .jumbotron {
+  background:  url('road.jpg');
+  color: #9d9d9d;
 }
 
 /*footer formatting*/
