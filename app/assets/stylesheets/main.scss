@@ -157,13 +157,18 @@ a.dropdown-toggle:hover {
   overflow: scroll;
 }
 
+.contact-page {
+  height: 100%;
+}
+
 /*footer formatting*/
 
 .footer {
+  position: relative;
   bottom: 0;
   width: 100%;
-  background-color: #373d42;
   height: 60px;
+  background-color: #373d42;
   margin: 0 0;
 }
 
@@ -173,7 +178,6 @@ a.dropdown-toggle:hover {
   color: #9d9d9d;
   text-align: center;
   vertical-align: middle;
-  line-height: 60px;
 }
 
 .footer a:hover {
