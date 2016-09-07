@@ -1,77 +1,43 @@
-<div class="container about-page">
+<!-- Jumbotron -->
+<div class="container contact-page">
+  <div class="jumbotron">
+    <h1>About the Indy Public Transit Survey</h1>
+  </div>
+
+  <!-- Survey and Developer Info -->
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <h3><center>About Indy Public Transit Survey</center></h3>
-    </div>
-  </div>
-  <!-- information about the survey -->
-  <div class="row app-info">
-    <div class="col-sm-3 col-md-3 col-lg-3">
-      <h4>The Survey</h4>
-        <%= image_tag('survey_map.png', width: "40%", class: "img-responsive", alt: "Responsive Image", class: "img-rounded") %>
-    </div>
-    <div class="col-sm-8 col-md-8 col-lg-8">
+    <div class="col-md-4 col-lg-4">
+      <h2>The Survey</h2>
       <%= Textfile.content_for("app_info") %>
-    </div>
-    <div class="col-sm-1 col-md-1 col-lg-1">
-    </div>
-  </div>
-  <hr>
-  <!-- how to read/use the pages -->
-  <div class="row how_to_use">
-    <div class="col-sm-3 col-md-3 col-lg-3">
-      <h4>How to use this app</h4>
-      <%= image_tag('heatmap_image2.png', width: "40%", class: "img-responsive", alt: "Responsive Image", class: "img-rounded") %>
-    </div>
-    <div class="col-sm-8 col-md-8 col-lg-8">
-      <%= Textfile.content_for("how_to_use") %>
-    </div>
-    <div class="col-sm-1 col-md-1 col-lg-1">
-    </div>
-  </div>
-  <hr>
-  <!-- developer bio -->
-  <div class="row developer-bio">
-    <div class="col-sm-3 col-md-3 col-lg-3">
-      <h4>About the Developer</h4>
-      <%= image_tag('dev_pic.jpg', width: "40%", class: "img-responsive", alt: "Responsive Image", class: "img-rounded") %>
-    </div>
-    <div class="col-sm-8 col-md-8 col-lg-8">
-      <%= Textfile.content_for("developer_bio") %>
-      <%= link_to "To reach me, visit the contact page", 'contact', class: "btn btn-default btn-small" %>
-    </div>
-    <div class="col-sm-1 col-md-1 col-lg-1">
-    </div>
-  </div>
-  <hr>
-  <!-- developer tools used for app -->
-  <div class="row tools-used">
-    <div class="col-sm-3 col-md-3 col-lg-3">
-      <h4>Development Tools</h4>
-        <%= image_tag('Ruby_on_Rails-logo.png', width: "30%", class: "img-responsive", alt: "Responsive Image", class: "img-rounded") %>
-    </div>
-    <div class="col-sm-8 col-md-8 col-lg-8">
+      <h2>Build Summary</h2>
       <%= Textfile.content_for("tools_used") %>
       <div class="row">
-        <div class="col-xs-2 col-sm-1 col-sm-offset-3 col-md-1 col-md-offset-3 col-lg-1 col-lg-offset-3">
+        <div class="col-md-2">
           <%= image_tag('ruby-logo.png', class: "img-responsive", alt: "Responsive Image", display: "flex") %>
         </div>
-        <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
+        <div class="col-md-2">
           <%= image_tag('html-logo.png', class: "img-responsive", alt: "Responsive Image") %>
         </div>
-        <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
+        <div class="col-md-2">
           <%= image_tag('css-logo.png', class: "img-responsive", alt: "Responsive Image") %>
         </div>
-        <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
+        <div class="col-md-2">
           <%= image_tag('javascript-logo.png', class: "img-responsive", alt: "Responsive Image") %>
         </div>
-        <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
+        <div class="col-md-2">
           <%= image_tag('Ruby_on_Rails-logo.png', class: "img-responsive", alt: "Responsive Image") %>
         </div>
       </div>
     </div>
-    <div class="col-sm-1 col-md-1 col-lg-1">
+    <div class="col-md-4 col-lg-4">
+      <h2>How to use this app</h2>
+      <%= Textfile.content_for("how_to_use") %>
+   </div>
+    <div class="col-md-4 col-lg-4 suggestions">
+      <h2>About the Developer</h2>
+      <%= image_tag('dev_pic.jpg', width: "30%", class: "img-responsive", alt: "Responsive Image", class: "img-rounded") %>
+      <%= Textfile.content_for("developer_bio") %>
+      <center><%= link_to "To contact me, click here", '/pages/about', class: "btn btn-default btn-sm" %></center>
     </div>
   </div>
-  <hr>
 </div>
