@@ -1,0 +1,3 @@
+### What is a heatmap?
+
+For the purpose of this study, a heatmap is a graphical representation of latitude and longitude points, otherwise known as polylines, collected along a commuter's route. For example, a 20 mile route from Plainfield, IN, to downtown Indianapolis, contains approximately 800 polylines. For commuters that follow similar routes, the polylines are added to the database and "stacked" on top of one another. Roadways with a higher concentration of polylines will be colored red, and areas of lower intensity will appear green. This allows the collection of data to be shown altogether on one map.
