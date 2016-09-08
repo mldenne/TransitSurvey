@@ -20,7 +20,7 @@
       <h4>For general suggestions:</h4>
         <div class="row email-address">
           <div class="col-md-6 col-lg-6">
-            <p>Send me an email: </p>
+            <p>Email: </p>
           </div>
           <div class="col-md-6 col-lg-6">
             <%= mail_to(Textfile.content_for("email_address")) %>
@@ -28,13 +28,19 @@
         </div>
         <div class="row twitter-account">
           <div class="col-md-6 col-lg-6">
-            <p>Follow me on Twitter: </p>
+            <p>Twitter: </p>
           </div>
           <div class="col-md-6 col-lg-6">
             <%= Textfile.content_for("twitter_account") %>
         </div>
+        <div class="col-md-6 col-lg-6">
+          <p>GitHub: </p>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <%= link_to "mldenne.github.io", "https://mldenne.github.io/", target: "_blank"  %>
+        </div>
       </div>
-      <h4>For developers interested in this project:</h4>
+      <h4>For developers:</h4>
       <div class="row github-repo">
         <div class="col-md-6 col-lg-6">
           <p>GitHub repository: </p>
