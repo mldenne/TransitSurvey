@@ -8,14 +8,42 @@
   <div class="row">
     <div class="col-md-4 col-lg-4">
       <h2>Current Indianapolis Public Transportation</h2>
-      <p>[Links to be inserted]</p>
+      <hr>
+      <h4>Indy Go:</h4>
+      <div class="row indy-go">
+        <div class="col-md-8 col-lg-8">
+          <p>Indianapolis Public Transportation Corporation</p>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <strong><%= link_to "IndyGo", "http://www.indygo.net/", target: "_blank"  %></strong>
+        </div>
+      </div>
     </div>
     <div class="col-md-4 col-lg-4">
       <h2>Public Awareness Groups/Organizations</h2>
-      <p>[Links to be inserted]</p>
+      <hr>
+      <h4>Indy Connect:</h4>
+      <div class="row indy-connect">
+        <div class="col-md-8 col-lg-8">
+          <p>Central Indiana's Transit Initiative</p>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <strong><%= link_to "Indy Connect", "http://www.indyconnect.org/", target: "_blank"  %></strong>
+        </div>
+      </div>
+      <h4>indyhub:</h4>
+      <div class="row indy-hub">
+        <div class="col-md-8 col-lg-8">
+          <p>Connect with indyhub, connect with Indianapolis.</p>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <strong><%= link_to "indyhub", "http://indyhub.org/", target: "_blank"  %></strong>
+        </div>
+      </div>
    </div>
     <div class="col-md-4 col-lg-4 suggestions">
       <h2>What other public transit data would you like to see?</h2>
+      <hr>
       <%= Textfile.content_for("suggestions") %>
       <h4>For general suggestions:</h4>
         <div class="row email-address">
@@ -37,7 +65,7 @@
           <p>GitHub: </p>
         </div>
         <div class="col-md-6 col-lg-6">
-          <%= link_to "mldenne.github.io", "https://mldenne.github.io/", target: "_blank"  %>
+          <strong><%= link_to "mldenne.github.io", "https://mldenne.github.io/", target: "_blank"  %></strong>
         </div>
       </div>
       <h4>For developers:</h4>
@@ -46,7 +74,7 @@
           <p>GitHub repository: </p>
         </div>
         <div class="col-md-6 col-lg-6">
-          <%= link_to "TransitSurvey", "https://github.com/mldenne/TransitSurvey", target: "_blank"  %>
+          <strong><%= link_to "TransitSurvey", "https://github.com/mldenne/TransitSurvey", target: "_blank"  %></strong>
         </div>
       </div>
     </div>
